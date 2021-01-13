@@ -1,0 +1,5 @@
+SPARQLWrapper
+pandas
+pytest
+rdflib-jsonld
+requests

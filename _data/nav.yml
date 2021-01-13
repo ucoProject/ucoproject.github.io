@@ -3,18 +3,26 @@
 - name: Releases
   submenuitems:
     - name: Latest Release
-      link: /ontology/releases/0.1.0/
-    - name: SPACE
+      link: /releases/0.2.0/
     - name: Archived Releases
-      link: /ontology/releases/archive/
+      link: /releases/archive/
+    - name: SPACE
+    - name: Under Development
+      link: /releases/0.3.0/
 - name: Ontology
   submenuitems:
     - name: Introduction
       link: /ontology/intro.html
     # - name: Guides
     #   link: /ontology/guides.html
-    - name: Examples
-      link: /ontology/examples.html
+    - name: Versioning
+      link: /ontology/versioning.html
+    - name: SPACE
+    - header: Examples
+    - name: Investigation
+      link: /examples/asgard/
+    - name: View More
+      link: /examples/gallery.html
     # - name: SPACE
     # - name: Latest Specification
     #   link: /ontology/spec.html
@@ -30,27 +38,33 @@
       link: /community/members.html
     - name: Meetings
       link: /community/meetings.html
+    - name: Presentations
+      link: /community/presentations.html
     - name: SPACE
     - name: Join CASE Community
       link: /community/membership.html
 - name: Resources
   submenuitems:
-    - header: Library
     - name: Bylaws
       link: /resources/bylaws.html
     - name: Code of Conduct
       link: /resources/coc.html
-    - name: Downloads
-      link: /resources/downloads.html
-    - name: SPACE
-    - header: Documentation
     - name: Roadmap
       link: /resources/roadmap.html
+    - name: GitHub Policies
+      link: /resources/github_policies.html
+    - name: GitHub Repos
+      link: /resources/github_repos.html
+    - name: SPACE
+    - header: Libraries
+    - name: Downloads
+      link: /resources/downloads.html
     - name: Publications
       link: /resources/publications.html
     - name: Reference Material
       link: /resources/references.html
-    - name: Ontology Versioning
-      link: /resources/versioning.html
-- name: Contribute
-  link: /contribute.html
+    - name: Media
+      link: /resources/media.html
+
+- name: Contact
+  link: /contact.html
