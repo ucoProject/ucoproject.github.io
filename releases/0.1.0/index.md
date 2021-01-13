@@ -6,12 +6,12 @@ custom_css: releases
 
 ## {{ page.title }}
 
-###### Date: 2017-01-13
+###### Date: 2017-01-05
 
 #### Release Notes
 
-Initial (“prototype”) release of the CASE ontology. Included concepts copied from UCO rather than imported.
+Initial (“prototype”) release of the UCO ontology.
 
 #### Ontology File(s)
 
-[GitHub](https://github.com/casework/CASE/blob/0.1.0/case.ttl)
+[GitHub](https://github.com/ucoProject/UCO/releases/tag/v0.1.0)
