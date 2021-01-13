@@ -1,0 +1,23 @@
+---
+title: Archived Releases
+jumbo_desc: Previous versions of the CASE Ontology
+custom_js: releases
+---
+<table id="releases" class="table table-hover">
+  <thead>
+    <tr>
+      <th>Release</th>
+      <th>Date</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in site.data.releases.releases %}
+      <tr>
+        <td><a href="/releases/{{ item.title }}/">CASE {{ item.title }}</a></td>
+        <td>{{ item.date }}</td>
+        <td>{{ item.desc }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
