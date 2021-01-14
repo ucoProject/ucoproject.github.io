@@ -1,6 +1,12 @@
 - title: 0.1.0
-  date: 2017-01-13
-  desc: Initial (“prototype”) release of the CASE ontology. Included concepts copied from UCO rather than imported.
-- title: 0.2.0
-  date: 2020-08-20
-  desc: Release of the CASE ontology with an encoded relationship with UCO. Removed prototype file, imported UCO, and provided investigation namespace.
+  date: 2017-01-05
+  desc: Initial (“prototype”) release of the UCO ontology.
+- title: 0.3.0
+  date: 2019-07-13
+  desc: The content of v0.3.0 is primarily of fixing lexical, syntactic and semantic reasoning errors present in v0.2.0 and simplifying in some areas.
+- title: 0.4.0
+  date: 2020-06-01
+  desc: UCO Version 0.4.0 is primarily focused on fixing syntax & structural errors, splitting domain assertions into companion files and moving some controlled vocabulary enumerations into a separate vocabulary namespace using a new specification approach.
+- title: 0.5.0
+  date: 2020-11-18
+  desc: UCO 0.5.0 is primarily focused on the removal of the investigation namespace from UCO (that namespace now resides in the CASE ontology) and on the renaming of several classes (Observable subclasses, Facet subclasses) in the observable namespace and a single property (core:facet) to support improved alignment with the CASE ontology and the forthcoming addition of ObservableObject subclasses.
