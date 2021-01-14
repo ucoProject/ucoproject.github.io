@@ -10,7 +10,7 @@ custom_css: releases
 
 #### Release Notes
 
-Initial (“prototype”) release of the UCO ontology.
+UCO 0.5.0 is primarily focused on the removal of the investigation namespace from UCO (that namespace now resides in the CASE ontology) and on the renaming of several classes (Observable subclasses, Facet subclasses) in the observable namespace and a single property (core:facet) to support improved alignment with the CASE ontology and the forthcoming addition of ObservableObject subclasses.
 
 #### Ontology File(s)
 

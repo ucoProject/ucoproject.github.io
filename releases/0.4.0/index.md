@@ -10,7 +10,7 @@ custom_css: releases
 
 #### Release Notes
 
-Initial (“prototype”) release of the UCO ontology.
+UCO Version 0.4.0 is primarily focused on fixing syntax & structural errors, splitting domain assertions into companion files and moving some controlled vocabulary enumerations into a separate vocabulary namespace using a new specification approach.
 
 #### Ontology File(s)
 
