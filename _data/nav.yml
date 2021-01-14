@@ -1,5 +1,6 @@
 - name: Getting Started
-  link: /ontology/start.html
+  link: \#
+  #link: /ontology/start.html
 - name: Releases
   submenuitems:
     - name: Latest Release
@@ -12,7 +13,8 @@
 - name: Ontology
   submenuitems:
     - name: Introduction
-      link: /ontology/intro.html
+      link: \#
+      #link: /ontology/intro.html
     - name: Versioning
       link: /ontology/versioning.html
 - name: Adopters
