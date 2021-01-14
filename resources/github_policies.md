@@ -3,16 +3,16 @@ title: GitHub Policies
 jumbo_desc:
 ---
 
-This page describes policies to make stable addresses for software repositories on [https://github.com/casework/](https://github.com/casework/).
+This page describes policies to make stable addresses for software repositories on [https://github.com/ucoProject/](https://github.com/ucoProject/).
 
-Types of repositories on GitHub/casework
+Types of repositories on GitHub/ucoProject
 ----------------------------------------
 
 ### Implementation
 
-An Implementation converts tool output to CASE. There is an inherent tie of a CASE Implementation to a specific tool or data format.
+An Implementation converts tool output to UCO. There is an inherent tie of a UCO Implementation to a specific tool or data format.
 
-Originally, CASE had considered using "Proof of Concept," or "Implementation," for these repositories. On considering a "Development status" annotation for each repository, "Proof of Concept" no longer seemed worthwhile, as it could cause a repository rename if a proof of concept would gain sufficient interest.
+Originally, UCO had considered using "Proof of Concept," or "Implementation," for these repositories. On considering a "Development status" annotation for each repository, "Proof of Concept" no longer seemed worthwhile, as it could cause a repository rename if a proof of concept would gain sufficient interest.
 
 ### Utility
 
@@ -20,16 +20,16 @@ An intermediary tool not necessarily meant for end users, instead meant for adop
 
 ### Bindings
 
-Bindings provide support for generating CASE data for a programming language, not necessarily tied to any particular consumer tool.
+Bindings provide support for generating UCO data for a programming language, not necessarily tied to any particular consumer tool.
 
-NOTE - CASE does not use the term "API" here on account of "API" being overloaded, appearing in several usage situations for CASE. For instance, ontologies have an API, over REST. Some parties also consider providing a REST endpoint to be providing an API. "Bindings" is generally understood to be more scoped to just programming languages.
+NOTE - UCO does not use the term "API" here on account of "API" being overloaded, appearing in several usage situations for UCO. For instance, ontologies have an API, over REST. Some parties also consider providing a REST endpoint to be providing an API. "Bindings" is generally understood to be more scoped to just programming languages.
 
-When does a repository go under github/casework?
+When does a repository go under github/ucoProject?
 ------------------------------------------------
 
-Either a code repository is hosted under casework, or would be hosted by a community member.
+Either a code repository is hosted under ucoProject, or would be hosted by a community member.
 
-Hosting under casework:
+Hosting under ucoProject:
 
 -   There is an expectation that community members may participate in evolving the code.
 
@@ -39,7 +39,7 @@ Hosting under the community member:
 
 -   The organization expects to maintain the code themselves.
 
-Support requirements of code repositories on github/casework
+Support requirements of code repositories on github/ucoProject
 ------------------------------------------------------------
 
 These are graded support requirements, aligning with the repository's Development Status.
@@ -56,19 +56,19 @@ We have observed a software packaging ecosystem, Pypi, designate the Development
 6 - Mature\
 7 - Inactive
 
-CASE recommends adoption of these statuses for any repository hosted on github/casework, by specifying requirements to consider a repository having met a support level.
+UCO recommends adoption of these statuses for any repository hosted on github/ucoProject, by specifying requirements to consider a repository having met a support level.
 
 ### Support requirements once a project reaches a development status
 
 #### 3 - Alpha
 
--   Designation of versions of CASE and UCO the project supports.
+-   Designation of versions of UCO and UCO the project supports.
 
 -   Follow Semantic Versioning (SEMVER).
 
 #### 4 - Beta
 
--   Tests are implemented to confirm conformance with the specified versions of CASE and UCO.
+-   Tests are implemented to confirm conformance with the specified versions of UCO and UCO.
 
 #### 5 - Production/Stable
 

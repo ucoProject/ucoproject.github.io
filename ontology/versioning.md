@@ -1,6 +1,6 @@
 ---
-title: CASE Ontology Versioning
-jumbo_desc: How CASE ontology versioning works
+title: UCO Ontology Versioning
+jumbo_desc: How UCO ontology versioning works
 ---
 
 The syntax for versioning will follow a <***major***>.<***minor***>.<***hotfix***> numeric pattern, e.g., version **1.2.4**.
