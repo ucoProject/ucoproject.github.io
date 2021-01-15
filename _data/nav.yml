@@ -1,5 +1,5 @@
-- name: Getting Started
-  link: \#
+#- name: Getting Started
+#  link: \#
   #link: /ontology/start.html
 - name: Releases
   submenuitems:
@@ -12,8 +12,8 @@
       link: /releases/0.6.0/
 - name: Ontology
   submenuitems:
-    - name: Introduction
-      link: \#
+#    - name: Introduction
+#      link: \#
       #link: /ontology/intro.html
     - name: Versioning
       link: /ontology/versioning.html

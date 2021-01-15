@@ -7,6 +7,7 @@ Existing subdomains include:
 - digital investigation
 - cyber risk management
 - cyber threat intelligence
+
 UCO’s cyber investigation use case is managed by the CASE Opensource Community
 
 ### [CASE Opensource Community](https://caseontology.org)
