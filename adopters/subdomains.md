@@ -2,11 +2,12 @@
 title: Subdomain Communities
 jumbo_desc:
 ---
-The Unified Cyber Ontology is a crosscutting and unified ontology approach to capturing the foundational objects, relationships, and rules across the cybersecurity domain. UCO works in close collaboration with adopting communities with expertise in specific cyber subdomain areas, where those communities extend UCO with a subontology containing objects, relationships, and rules that are specific to that cyber subdomain area. The UCO Community and subdomain communities align ontology development priorities and adoption technology engineering efforts. From time-to-time, the UCO Community adds new subdomain communities to join the effort. Subdomain communities can save a lot of engineering time by inheriting the common cyber domain objects, relationships, and rules applicable across the cyber domain.
+The Unified Cyber Ontology is a crosscutting and unified ontology approach to capturing the foundational objects, relationships, and rules across the cybersecurity domain. UCO works in close collaboration with adopting communities with expertise in specific cyber subdomain areas, where those communities extend UCO with ontologies containing objects, relationships, and rules that are specific to that cyber subdomain area. The UCO Community and subdomain communities align ontology development priorities and adoption technology engineering efforts. From time-to-time, the UCO Community adds new subdomain communities to join the effort. Subdomain communities can save a lot of engineering time by inheriting the common cyber domain objects, relationships, and rules applicable across the cyber domain.
 Existing subdomains include:
 - digital investigation
 - cyber risk management
 - cyber threat intelligence
+- supply chain security
 
 UCO’s cyber investigation use case is managed by the CASE Opensource Community
 
@@ -19,4 +20,12 @@ Digital Investigation Tools that have adopted CASE and UCO.
 
 
 ### Cyber Risk Management Community
-The UCO Community has efforts underway to address the subdomain of cyber risk management including system of trust. The effort is integrating MITRE’s Common Vulnerability Enumeration (CVE), Common Weakness Enumeration (CWE), and Common Attack Pattern Enumeration and Classification (CAPEC). The UCO Community is planning to spin out cyber risk management contributors into its own subdomain community in the future.
+The UCO Community has efforts underway to address the subdomain of cyber risk management. The UCO Community is planning to spin out cyber risk management contributors into its own subdomain community in the future.
+
+
+### Cyber Threat Intelligence Community
+The UCO Community has efforts underway to address the subdomain of cyber threat intelligence (CTI) with formal ontological specifications to provide a solid and flexible underpinning to various existing CTI resources and serializations. The UCO Community is planning to spin out cyber threat intelligence contributors into its own subdomain community in the future.
+
+
+### Supply Chain Security Community
+The UCO Community has efforts underway to address the subdomain of supply chain security. The UCO Community is planning to spin out cyber risk management contributors into its own subdomain community in the future.
