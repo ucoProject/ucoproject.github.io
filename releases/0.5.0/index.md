@@ -14,4 +14,4 @@ UCO 0.5.0 is primarily focused on the removal of the investigation namespace fro
 
 #### Ontology File(s)
 
-[GitHub](https://github.com/ucoProject/UCO/releases/tag/v0.5.0)
+[GitHub](https://github.com/ucoProject/UCO/releases/tag/0.5.0)
