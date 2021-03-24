@@ -14,4 +14,4 @@ Currently in development
 
 #### Ontology File(s)
 
-[GitHub](https://github.com/ucoProject/UCO/releases/tag/v0.6.0)
+[GitHub](https://github.com/ucoProject/UCO/releases/tag/0.6.0)
