@@ -14,4 +14,4 @@ The content of v0.3.0 is primarily of fixing lexical, syntactic and semantic rea
 
 #### Ontology File(s)
 
-[GitHub](https://github.com/ucoProject/UCO/releases/tag/v0.3.0)
+[GitHub](https://github.com/ucoProject/UCO/releases/tag/0.3.0)
