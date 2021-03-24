@@ -14,4 +14,4 @@ UCO Version 0.4.0 is primarily focused on fixing syntax & structural errors, spl
 
 #### Ontology File(s)
 
-[GitHub](https://github.com/ucoProject/UCO/releases/tag/v0.4.0)
+[GitHub](https://github.com/ucoProject/UCO/releases/tag/0.4.0)
