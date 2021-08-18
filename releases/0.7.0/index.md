@@ -15,7 +15,7 @@ UCO 0.7.0 is primarily focused on the conversion of UCO ontologies to leverage t
 
 [UCO 0.7.0 Release Notes](./UCO-0.7.0-ReleaseNotes.pdf)
 
-#### Change proposals addressed in UCO 0.7.0
+#### [Change proposals addressed in UCO 0.7.0](https://unifiedcyberontology.atlassian.net/wiki/spaces/OC/pages/61243393/Change+Proposals)
 
 * CP-5: Refactor and improve contacts
 * CP-23: Convert current property restrictions and domain assertions to SHACL shapes
