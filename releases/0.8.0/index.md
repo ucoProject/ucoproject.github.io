@@ -17,11 +17,11 @@ custom_css: releases
 #### Breaking Changes
 *(These are changes to ontologies, classes or properties in the preexisting ontology that make the new release non-backward-compatible.)*
 
-* Restructured repository by moving previously prefixed uco-* ontology files under new directory /ontology/* [CP-Ref-Needed]
+* Restructured repository by moving previously prefixed uco-* ontology files under new directory /ontology/* [CP-56]
 
 #### Changes
 
 *(These are general changes to the preexisting ontology that are not breaking or range changes.)*
 
-* Updated CI testing (Makefiles) to reflect repository restructure [CP-Ref-Needed]
+* Updated CI testing (Makefiles) to reflect repository restructure [CP-56]
 
