@@ -4,23 +4,20 @@ layout: releases
 custom_css: releases
 ---
 
-## {{ page.title }}
+# {{ page.title }}
 
 ###### Date: TBD
 
+## Ontology File(s)
 
-#### Release Notes
+###### GitHub: Release TBD
 
+## Release Notes
 
-
-#### Change proposals addressed in UCO 0.8.0
-
-
-
-#### Ontology File(s)
+#### Breaking Changes
+*(These are changes to ontologies, classes or properties in the preexisting ontology that make the new release non-backward-compatible.)*
 
 
-
-#### Documentation
-
+#### Changes
+*(These are general changes to the preexisting ontology that are not breaking or range changes.)*
 
