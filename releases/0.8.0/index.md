@@ -26,3 +26,4 @@ custom_css: releases
 * Normalized all decimal number properties in the ontology to xsd:decimal ([*Change Proposal 80*](https://drive.google.com/file/d/1NKwEehcRDWh9zk9QOENckd7njYWxgVE4/view))
 * Add vocabulary namespace to uco.ttl in uco-master ([*Change Proposal 82*](https://drive.google.com/file/d/1qQibtD9QAqciLOBkkk6WdDcrz7nEQZL2/view))
 * Fix namespace prefix for WhoisContactTypeVocab from observable to vocabulary ([*Change Proposal 84*](https://drive.google.com/file/d/1KbYImZyxzL3kPfA9-SP4Xi_pXnEkOw0W/view))
+* Remove sh:datatype property entries from observable.ttl added by SHACL data conversion errors ([*Change Proposal 85*](https://drive.google.com/file/d/1Wu2fQ5kYKxQWfmK-0s1IIBytKcnW0Tjw/view))
