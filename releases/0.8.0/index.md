@@ -28,3 +28,4 @@ custom_css: releases
 * Fix namespace prefix for WhoisContactTypeVocab from observable to vocabulary ([*Change Proposal 84*](https://drive.google.com/file/d/1KbYImZyxzL3kPfA9-SP4Xi_pXnEkOw0W/view))
 * Remove sh:datatype property entries from observable.ttl added by SHACL data conversion errors ([*Change Proposal 85*](https://drive.google.com/file/d/1Wu2fQ5kYKxQWfmK-0s1IIBytKcnW0Tjw/view))
 * Make observable:AlternateDataStream into a Facet subclass ([*Change Proposal 87*](https://drive.google.com/file/d/1qOo-0RGJErJ2w3yMGgs6lIlkldsEUHBb))
+* Add missing fields for "lastTimeContacted" to the ontology ([*Change Proposal 97*](https://drive.google.com/file/d/1185Uur_wPqdI8VBawZ4E4mplVu-gZkYR))
