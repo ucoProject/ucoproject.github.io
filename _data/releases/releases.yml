@@ -16,3 +16,6 @@
 - title: 0.7.0
   date: 2021-08-18
   desc: UCO 0.7.0 is primarily focused on the conversion of UCO ontologies to leverage the Shapes Constraint Language (SHACL) rather than domain assertions and owl property restrictions to define class shapes. In addition, it added a Continuous Integration (CI) method for testing and verifying the ontology and it corrects several minor issues and bugs.
+- title: 0.8.0
+  date: 2022-03-23
+  desc: UCO 0.8.0 is primarily focused on an initial implementation of Shapes Constraint Language (SHACL) review of semi-open vocabulary usage, restructuring of all UCO ontology IRIs and file structures to enable delivery of ontology resources from a new subdomain, flattening actionActionReferencesFacet properties directly onto action:Action, normalizing decimal number properties to xsd:decimal, improvements to unit and CI testing, numerous modifications and improvements to the Observable namespace, and correcting several minor issues and bugs.
