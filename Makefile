@@ -35,9 +35,7 @@ all: \
 .venv.done.log: \
   requirements.txt
 	rm -rf venv
-	$(PYTHON3) -m virtualenv \
-	  --python=$(PYTHON3) \
-	  venv
+	$(PYTHON3) -m venv venv
 	source venv/bin/activate ; \
 	  pip install \
 	    --upgrade \
