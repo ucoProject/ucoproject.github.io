@@ -78,7 +78,7 @@ In the RDF graph ALL instances of classes and all literal values of properties a
 
 Imagine UCO content expressing that a person John Smith is located at 5th Ave in New York City.
 An RDF graph of this would look like:
-![RDF Graph example](../object-example-rdf-graph.drawio.png "RDF graph example")
+![RDF Graph example](./object-example-rdf-graph.drawio.png "RDF graph example")
 
 In the UCO RDFS/OWL/SHACL ontology, classes are defined for any relevant domain concept as well as for any structured concept characterizing some aspect of a domain concept. Domain concept classes (e.g., File, Action, Identity, Location, Device, etc.) are defined as subclasses of the UcoObject class while structured concept classes characterizing some aspect of a domain concept are considered part of the domain concept and thus are not. A subset of some structured concept classes characterizing some aspect of a domain concept are defined as facet classes as described in #5 below.
 
@@ -87,7 +87,7 @@ All objects in UCO must specify a globally unique identifier (discussed in #4 be
 Instances of UcoObject subclasses (domain concept classes) are the granularity of discourse in the cyber domain and are thus objects/nodes in the UCO domain graph. Relationships between UcoObject subclasses (either in the form of OWL ObjectProperties or in the form of Relationship object subclasses of UcoObject as described below) are edges in the domain graph. Some relationships between UcoObject subclasses may require further characterization beyond simply expressing an association. These relationships are represented with the Relationship class which itself is a subclass of UcoObject and therefore a node itself in the domain graph. This is further discussed in #6 below.
 
 The domain graph of the above example would look like:
-![RDF Graph example](../object-example-domain-graph.drawio.png "Domain graph example")
+![RDF Graph example](./object-example-domain-graph.drawio.png "Domain graph example")
 
 
 The UCO domain graph is also the standard granularity that content is typically serialized or queried at as well. If you query for or serialize a domain object you do so as a complete atomic entity including any non-domain objects characterizing the domain object.
@@ -316,7 +316,7 @@ For example, consider an email message and the relationship to an email address 
 &nbsp;
 
 
-![ObjectProperty Relationship example](../relationship-example-simple-object-property.drawio.png "ObjectProperty Relationship example")
+![ObjectProperty Relationship example](./relationship-example-simple-object-property.drawio.png "ObjectProperty Relationship example")
 
 &nbsp;
 
@@ -339,7 +339,7 @@ A simple graph example of this could look something like:
 &nbsp;
 
 
-![Relationship object example](../relationship-example-simple-relationship-object.drawio.png "Relationship object example")
+![Relationship object example](./relationship-example-simple-relationship-object.drawio.png "Relationship object example")
 
 &nbsp;
 
@@ -359,7 +359,7 @@ Another example of a Relationship object but as JSON-LD could look something lik
 
 And another graph example showing the referencing of a Relationship object as a unique object could look something like:
 
-![Reference to Relationship object example](../relationship-example-reference-to-relationship-object.drawio.png "Reference to Relationship object example")
+![Reference to Relationship object example](./relationship-example-reference-to-relationship-object.drawio.png "Reference to Relationship object example")
 
 Another fundamental question to consider is regarding the appropriate cardinality of either end of such a Relationship object. The most simple scenario is a relationship from one object to one other object. This scenario keeps things nice and clean and unambiguous. However, there are some use cases that may desire to specify more than one object on either end of the relationship. There are really four potential variants: 1-to-1, n-to-1, 1-to-n, and n-to-n. One motivation for desiring a cardinality greater than one on either end of the relationship is to act as a compact way to express multiple relationships that share a ```core:kindOfRelationship``` and either a common ```core:source``` or ```core:target```. Another motivation for desiring a cardinality greater than one on either end of the relationship is to specify a relationship to or from a set of objects as an aggregated whole. Both or these are valid and useful motivations but open cardinality on either or both ends of a relationship brings significant potential complexity and the inability to distinguish which of the motivations was in play for a given relationship without the additional complexity of further contextual properties. The current decision within UCO is that limiting to only 1-to-1 is inadequate but opening to n-to-n is too complex and so a compromise of n-to-1 is currently defined. This is not a decision set in stone and is open to future potential changes due to identified needs.
 
