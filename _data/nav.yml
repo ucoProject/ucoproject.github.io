@@ -33,6 +33,8 @@
       link: /resources/github_policies.html
     - name: GitHub Repos
       link: /resources/github_repos.html
+    - name: Design Document
+      link: /resources/uco_design_document.md
     - name: SPACE
     - header: Libraries
     - name: Publications
