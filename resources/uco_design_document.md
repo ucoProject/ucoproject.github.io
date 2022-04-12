@@ -1,3 +1,8 @@
+---
+title: UCO Design Document
+jumbo_desc:
+---
+
 # 1 UCO Foundational Principles
 The following foundational principles outline the fundamental ethos of the Cyber Domain Ontology ecosystem. These principles are immutable and lay the foundation for the activities of the Technical Steering Committee (TSC) and relevant initiatives within the Cyber Domain Ontology project:
 
