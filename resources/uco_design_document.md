@@ -156,11 +156,12 @@ As RDF identifiers these object identifiers must be International Resource Ident
 
 An IRI can follow one of several schemes, including URN, HTTP, or HTTPS. In order to ensure global uniqueness and to support use as [Linked Data](https://en.wikipedia.org/wiki/Linked_data), UCO object identifiers should adhere to a formatting pattern consisting of a prefix portion combined with a suffix portion where the prefix portion is an HTTP or HTTPS URI based namespace controlled by the producer of the object and the suffix portion is a combination of an indicator of the object type followed by a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Versions).
 
-	<namespace><object type>-<UUID>
+`<namespace><object type>-<UUID>`
 	
 An example of this could be something like:
 
-	http://example.org/kb/location-f1e888a4-7a9d-42d9-af5e-01144ceda3ef
+`http://example.org/kb/location-f1e888a4-7a9d-42d9-af5e-01144ceda3ef`
+
 
 If the producer of the object controlled the namespace domain (example.org) then not only would this ensure global uniqueness but would also support the resolution of the identifier IRI to the object as Linked Data content if the producer desired though there is no requirement that UCO object identifiers be resolvable.
 
@@ -182,55 +183,55 @@ For instance, a digital photograph is represented as an ```observable:RasterPict
 
 ```json
 {
-            "@id": "kb:raster-picture-f970b1a2-c6f1-4082-a2fb-3e8f4a7913b2",
-            "@type": "observable:RasterPicture",
-            "core:hasFacet": [
+    "@id": "kb:raster-picture-f970b1a2-c6f1-4082-a2fb-3e8f4a7913b2",
+    "@type": "observable:RasterPicture",
+    "core:hasFacet": [
+        {
+            "@id": "kb:file-facet-a9a8cd7e-5e09-49c5-8ff4-c2cde2782d4d",
+            "@type": "observable:FileFacet",
+            "observable:fileSystemType": "EXT4",
+            "observable:fileName": "IMG_0123.jpg",
+            "observable:filePath": "/sdcard/IMG_0123.jpg",
+            "observable:extension": "jpg",
+            "observable:sizeInBytes": {
+                "@type": "xsd:long",
+                "@value": 35002
+            }
+        },
+        {
+            "@id": "kb:content-data-facet-434100af-bbd1-45d5-8926-92b191793f84",
+            "@type": "observable:ContentDataFacet",
+            "observable:byteOrder": "BigEndian",
+            "observable:magicNumber": "/9j/ww==",
+            "observable:mimeType": "image/jpg",
+            "observable:sizeInBytes": {
+                "@type": "xsd:long",
+                "@value": 35000
+            },
+            "observable:dataPayload": "<base 64 encoded data of the file>",
+            "observable:hash": [
                 {
-                    "@id": "kb:file-facet-a9a8cd7e-5e09-49c5-8ff4-c2cde2782d4d",
-                    "@type": "observable:FileFacet",
-                    "observable:fileSystemType": "EXT4",
-                    "observable:fileName": "IMG_0123.jpg",
-                    "observable:filePath": "/sdcard/IMG_0123.jpg",
-                    "observable:extension": "jpg",
-                    "observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 35002
+                    "@id": "kb:hash-a63dc64c-a07d-4c23-8013-c84ccd6592d8",
+                    "@type": "types:Hash",
+                    "types:hashMethod": {"SHA256"},
+                    "types:hashValue": {
+                        "@type": "xsd:hexBinary",
+                        "@value": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
                     }
-                },
-                {
-                    "@id": "kb:content-data-facet-434100af-bbd1-45d5-8926-92b191793f84",
-                    "@type": "observable:ContentDataFacet",
-                    "observable:byteOrder": "BigEndian",
-                    "observable:magicNumber": "/9j/ww==",
-                    "observable:mimeType": "image/jpg",
-                    "observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 35000
-                    },
-                    "observable:dataPayload": "<base 64 encoded data of the file>",
-                    "observable:hash": [
-                        {
-                            "@id": "kb:hash-a63dc64c-a07d-4c23-8013-c84ccd6592d8",
-                            "@type": "types:Hash",
-                            "types:hashMethod": {"SHA256"},
-                            "types:hashValue": {
-                                "@type": "xsd:hexBinary",
-                                "@value": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "@id": "kb:raster-picture-facet-9763e696-c5b9-4695-bd37-9dd831cc61da",
-                    "@type": "observable:RasterPictureFacet",
-                    "observable:pictureType": "jpg",
-                    "observable:pictureHeight": 12345,
-                    "observable:pictureWidth": 12345,
-                    "observable:bitsPerPixel": 2
-                },
+                }
+            ]
+        },
+        {
+            "@id": "kb:raster-picture-facet-9763e696-c5b9-4695-bd37-9dd831cc61da",
+            "@type": "observable:RasterPictureFacet",
+            "observable:pictureType": "jpg",
+            "observable:pictureHeight": 12345,
+            "observable:pictureWidth": 12345,
+            "observable:bitsPerPixel": 2
+        }
+    ]
 }
 ```
-
 
 The generalized approach of facets on domain objects provides value in simple support for use of particular facets across multiple classes/objects, for simplified 3rd party extension of UCO classes/objects, and for clean granularity for adopting profiles or application domain extensions to choose which adornments they want to use.
 
@@ -251,52 +252,53 @@ The example from #5 above could also be expressed with duck typing as a general 
 
 ```json
 {
-            "@id": "kb:observable-object-c5e0e9be-b206-401b-91ed-810de6c79730",
-            "@type": "observable:ObservableObject",
-            "core:hasFacet": [
+    "@id": "kb:observable-object-c5e0e9be-b206-401b-91ed-810de6c79730",
+    "@type": "observable:ObservableObject",
+    "core:hasFacet": [
+        {
+            "@id": "kb:file-facet-5c581af4-dd44-4fe9-9fe7-84498a02c22b",
+            "@type": "observable:FileFacet",
+            "observable:fileSystemType": "EXT4",
+            "observable:fileName": "IMG_0123.jpg",
+            "observable:filePath": "/sdcard/IMG_0123.jpg",
+            "observable:extension": "jpg",
+            "observable:sizeInBytes": {
+                "@type": "xsd:long",
+                "@value": 35002
+            }
+        },
+        {
+            "@id": "kb:content-data-facet-9bf2df61-2df9-4690-a2d8-6ac14b75ed5b",
+            "@type": "observable:ContentDataFacet",
+            "observable:byteOrder": "BigEndian",
+            "observable:magicNumber": "/9j/ww==",
+            "observable:mimeType": "image/jpg",
+            "observable:sizeInBytes": {
+                "@type": "xsd:long",
+                "@value": 35000
+            },
+            "observable:dataPayload": "<base 64 encoded data of the file>",
+            "observable:hash": [
                 {
-                    "@id": "kb:file-facet-5c581af4-dd44-4fe9-9fe7-84498a02c22b",
-                    "@type": "observable:FileFacet",
-                    "observable:fileSystemType": "EXT4",
-                    "observable:fileName": "IMG_0123.jpg",
-                    "observable:filePath": "/sdcard/IMG_0123.jpg",
-                    "observable:extension": "jpg",
-                    "observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 35002
+                    "@id": "kb:hash-1c49e84b-fd98-48a9-b384-7f937f7f7c2b",
+                    "@type": "types:Hash",
+                    "types:hashMethod": {"SHA256"},
+                    "types:hashValue": {
+                        "@type": "xsd:hexBinary",
+                        "@value": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
                     }
-                },
-                {
-                    "@id": "kb:content-data-facet-9bf2df61-2df9-4690-a2d8-6ac14b75ed5b",
-                    "@type": "observable:ContentDataFacet",
-                    "observable:byteOrder": "BigEndian",
-                    "observable:magicNumber": "/9j/ww==",
-                    "observable:mimeType": "image/jpg",
-                    "observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 35000
-                    },
-                    "observable:dataPayload": "<base 64 encoded data of the file>",
-                    "observable:hash": [
-                        {
-                            "@id": "kb:hash-1c49e84b-fd98-48a9-b384-7f937f7f7c2b",
-                            "@type": "types:Hash",
-                            "types:hashMethod": {"SHA256"},
-                            "types:hashValue": {
-                                "@type": "xsd:hexBinary",
-                                "@value": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "@id": "kb:raster-picture-facet-bf5ef8f5-49b2-4c65-9b59-4965dd109532",
-                    "@type": "observable:RasterPictureFacet",
-                    "observable:pictureType": "jpg",
-                    "observable:pictureHeight": 12345,
-                    "observable:pictureWidth": 12345,
-                    "observable:bitsPerPixel": 2
-                },
+                }
+            ]
+        },
+        {
+            "@id": "kb:raster-picture-facet-bf5ef8f5-49b2-4c65-9b59-4965dd109532",
+            "@type": "observable:RasterPictureFacet",
+            "observable:pictureType": "jpg",
+            "observable:pictureHeight": 12345,
+            "observable:pictureWidth": 12345,
+            "observable:bitsPerPixel": 2
+        }
+    ]
 }
 ```
 
@@ -347,12 +349,12 @@ Another example of a Relationship object but as JSON-LD could look something lik
 
 ```json
 {
-	  "@id": "kb:device-linkage-a1dbff0e-974b-4295-b035-e1bc3271945d",
-	  "@type": "core:Relationship",
-	  "core:source": ["kb:device1-24d20c80-f035-40ae-88dd-fc66f70180f6"],
-	  "core:target": "kb:device2-eee670c6-01d4-4e42-bb6b-ebeca149b168",
-	  "core:kindOfRelationship": "Referenced_Within",
-	  "core:isDirectional": true
+    "@id": "kb:device-linkage-a1dbff0e-974b-4295-b035-e1bc3271945d",
+    "@type": "core:Relationship",
+    "core:source": ["kb:device1-24d20c80-f035-40ae-88dd-fc66f70180f6"],
+    "core:target": "kb:device2-eee670c6-01d4-4e42-bb6b-ebeca149b168",
+    "core:kindOfRelationship": "Referenced_Within",
+    "core:isDirectional": true
 }
 ```
 &nbsp;
@@ -377,15 +379,13 @@ UCO instance content validation supported by the inclusion of [W3C Shapes Constr
 
 Example:
 
-	Method of travel = vehicle (constraint)
-
-	In a json schema the value in the method of travel must = vehicle
-
-	With SHACL you can validate on vehicle, car, or airplane because they are all semantically vehicles
+* Method of travel = vehicle (constraint)
+* In a json schema the value in the method of travel must = vehicle
+* With SHACL you can validate on vehicle, car, or airplane because they are all semantically vehicles
 
 For a concrete UCO example, the nodeshape for ```core:ConfidenceFacet``` below specifies that any instance object of the ```core:ConfidenceFacet``` class must have exactly one instance of the ```core:confidence``` property of type ```xsd:nonNegativeInteger```:
 
-```
+```turtle
 core:ConfidenceFacet
 	a
 		owl:Class ,
@@ -460,33 +460,35 @@ The intent of this design is to support specification of relevant property value
 * UCO supports this design using restricted Datatypes using owl:oneOf and rdf:List to assert that ONLY values from the defined value space are valid.
 * An example of this design is observable:WindowsServiceStartType.
 
-					observable:WindowsServiceStartType
-						a rdfs:Datatype ;
-						owl:equivalentClass [
-							a rdfs:Datatype ;
-							owl:oneOf [
-								a rdf:List ;
-								rdf:first "service_auto_start" ;
-								rdf:rest [
-									a rdf:List ;
-									rdf:first "service_boot_start" ;
-									rdf:rest [
-										a rdf:List ;
-										rdf:first "service_demand_start" ;
-										rdf:rest [
-											a rdf:List ;
-											rdf:first "service_disabled" ;
-											rdf:rest [
-												a rdf:List ;
-												rdf:first "service_system_alert" ;
-												rdf:rest rdf:nil ;
-											] ;
-										] ;
-									] ;
-								] ;
-							] ;
+```turtle
+observable:WindowsServiceStartType
+	a rdfs:Datatype ;
+	owl:equivalentClass [
+		a rdfs:Datatype ;
+		owl:oneOf [
+			a rdf:List ;
+			rdf:first "service_auto_start" ;
+			rdf:rest [
+				a rdf:List ;
+				rdf:first "service_boot_start" ;
+				rdf:rest [
+					a rdf:List ;
+					rdf:first "service_demand_start" ;
+					rdf:rest [
+						a rdf:List ;
+						rdf:first "service_disabled" ;
+						rdf:rest [
+							a rdf:List ;
+							rdf:first "service_system_alert" ;
+							rdf:rest rdf:nil ;
 						] ;
-						.
+					] ;
+				] ;
+			] ;
+		] ;
+	] ;
+	.
+```
 
 
 Validation
@@ -501,12 +503,14 @@ UCO supports this design using a range of xsd:string.
 
 An example of this design is the core:description property
 
-					core:description 
-						a owl:DatatypeProperty ; 
-						rdfs:label "description"@en ; 
-						rdfs:comment "A description of a particular concept characterization."@en ; 
-						rdfs:range xsd:string ;
-.
+```turtle
+core:description
+	a owl:DatatypeProperty ;
+	rdfs:label "description"@en ;
+	rdfs:comment "A description of a particular concept characterization."@en ;
+	rdfs:range xsd:string ;
+	.
+```
 
 Validation
 
@@ -543,28 +547,30 @@ UCO supports this open with suggested valid values (vocabularies) design using e
 
 **An example of this design is action:actionStatus (vocabulary:ActionStatusTypeVocab)**
 
-					action:actionStatus
-						a owl:DatatypeProperty ;
-						rdfs:label "actionStatus"@en ;
-						rdfs:comment "The current state of the action."@en ;
-						rdfs:range vocabulary:ActionStatusTypeVocab ;
-						.
-					
-					vocabulary:ActionStatusTypeVocab
-						a rdfs:Datatype ;
-						rdfs:subClassOf rdfs:Resource ;
-						rdfs:label "Action Status Type Vocabulary"@en-US ;
-						rdfs:comment "Defines an open-vocabulary of action status types."@en-US ;
-						owl:oneOf (
-							"Complete/Finish"^^vocabulary:ActionStatusTypeVocab
-							"Error"^^vocabulary:ActionStatusTypeVocab
-							"Fail"^^vocabulary:ActionStatusTypeVocab
-							"Ongoing"^^vocabulary:ActionStatusTypeVocab
-							"Pending"^^vocabulary:ActionStatusTypeVocab
-							"Success"^^vocabulary:ActionStatusTypeVocab
-							"Unknown"^^vocabulary:ActionStatusTypeVocab
-						) ;
-						.
+```turtle
+action:actionStatus
+	a owl:DatatypeProperty ;
+	rdfs:label "actionStatus"@en ;
+	rdfs:comment "The current state of the action."@en ;
+	rdfs:range vocabulary:ActionStatusTypeVocab ;
+	.
+
+vocabulary:ActionStatusTypeVocab
+	a rdfs:Datatype ;
+	rdfs:subClassOf rdfs:Resource ;
+	rdfs:label "Action Status Type Vocabulary"@en-US ;
+	rdfs:comment "Defines an open-vocabulary of action status types."@en-US ;
+	owl:oneOf (
+		"Complete/Finish"^^vocabulary:ActionStatusTypeVocab
+		"Error"^^vocabulary:ActionStatusTypeVocab
+		"Fail"^^vocabulary:ActionStatusTypeVocab
+		"Ongoing"^^vocabulary:ActionStatusTypeVocab
+		"Pending"^^vocabulary:ActionStatusTypeVocab
+		"Success"^^vocabulary:ActionStatusTypeVocab
+		"Unknown"^^vocabulary:ActionStatusTypeVocab
+	) ;
+	.
+```
 
 
 **Properties utilizing vocabularies are typically one of two cases**
