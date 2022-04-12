@@ -31,7 +31,7 @@ The following script can take a fresh Ubuntu VM and get a local copy of the webs
 #
 # We would appreciate acknowledgement if the software is used.
 
-# This script will clone the CASE website repository under ~/local/src,
+# This script will clone the UCO website repository under ~/local/src,
 # if not already cloned there, and execute a local Jekyll build of the
 # website for testing in a browser.
 # This script has been tested in an Ubuntu environment.
@@ -60,12 +60,12 @@ fi
 
 mkdir -p ${HOME}/local/src
 pushd ${HOME}/local/src
-  if [ ! -d casework.github.io ]; then
+  if [ ! -d ucoproject.github.io ]; then
     git clone \
-      https://github.com/casework/casework.github.io.git
+      https://github.com/ucoProject/ucoproject.github.io.git
   fi
 
-  pushd casework.github.io
+  pushd ucoproject.github.io
     bundle --version \
       || sudo gem install bundler:2.0.2
 
@@ -76,6 +76,6 @@ pushd ${HOME}/local/src
     # Via:
     #   https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll
     bundle exec jekyll serve
-  popd #casework.github.io
+  popd #ucoproject.github.io
 popd #${HOME}/local/src
 ```
