@@ -34,7 +34,7 @@
     - name: GitHub Repos
       link: /resources/github_repos.html
     - name: Design Document
-      link: /resources/uco_design_document.md
+      link: /resources/uco_design_document.html
     - name: SPACE
     - header: Libraries
     - name: Publications
