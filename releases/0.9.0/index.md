@@ -20,6 +20,7 @@ custom_css: releases
 
 * Removed observable:AttachmetFacet and added two new vocabulary terms to vocabulary:ObservableObjectRelationshipVocab ([*Change Proposal 81*](https://drive.google.com/file/d/1-NM50XbDTjSi4Ke3MTpIEPm1OI5ipmyo/view))
 * Changed observable:userName from an owl:ObjectProperty to an owl:DatatypeProperty ([*GitHub Issue 351*](https://github.com/ucoProject/UCO/issues/351))
+* Updated rdf-toolkit to version 1.11.0 and Java to version 11 ([*GitHub Issue 373*](https://github.com/ucoProject/issues/373))
 
 #### Changes
 *(These are general changes to the preexisting ontology that are not breaking or range changes.)*
