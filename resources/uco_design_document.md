@@ -80,7 +80,7 @@ Imagine UCO content expressing that a person John Smith is located at 5th Ave in
 An RDF graph of this would look like:
 ![RDF Graph example](./object-example-rdf-graph.drawio.png "RDF graph example")
 
-In the UCO RDFS/OWL/SHACL ontology, classes are defined for any relevant domain concept as well as for any structured concept characterizing some aspect of a domain concept. Domain concept classes (e.g., File, Action, Identity, Location, Device, etc.) are defined as subclasses of the UcoObject class while structured concept classes characterizing some aspect of a domain concept are considered part of the domain concept and thus are not. A subset of some structured concept classes characterizing some aspect of a domain concept are defined as facet classes as described in #5 below.
+In the UCO RDFS/OWL/SHACL ontology, classes are defined for any relevant domain concept as well as for any structured concept characterizing some aspect of a domain concept. Domain concept classes (e.g., File, Action, Identity, Location, Device, etc.) are defined as subclasses of the UcoObject class. Contrarily, aspects of the domain that inhere in UcoObjects characterize a particular pattern that can be considered part of one or more domain concepts; these aspects are defined as subclasses of the Facet class (described in #5 below). Consequently, something is either defined as a concept, i.e., a subclass of UcoObject, or defined to relate to a concept as aspects, i.e., a subclass of a Facet, but not both. 
 
 All objects in UCO must specify a globally unique identifier (discussed in #4 below) and an assertion of the class type of the object.
 
