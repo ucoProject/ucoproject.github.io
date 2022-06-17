@@ -6,11 +6,11 @@ custom_css: releases
 
 # {{ page.title }}
 
-###### Date: TBD
+###### Date: 2022-06-16
 
 ## Ontology File(s)
 
-###### GitHub: Release TBD
+[GitHub](https://github.com/ucoProject/UCO/releases/tag/0.9.0)
 
 ## Release Notes
 
@@ -32,4 +32,9 @@ custom_css: releases
 * Removed minimum cardinality bound on observable:isMimeEncoded and observable:isMultipart within observable:EmailMessageFacet ([*GitHub Issue 383*](https://github.com/ucoProject/UCO/issues/383))
 
 ## Documentation
-TBD
+
+Since UCO 0.8.0, generated documentation has been available at this site:
+
+[https://ontology.unifiedcyberontology.org/](https://ontology.unifiedcyberontology.org/)
+
+Be aware that the documentation will show the most recent release, until an ontology versioning strategy currently in initial implementation completes its testing.  The upper-left corner of the documentation pages shows the ontology version being reviewed.

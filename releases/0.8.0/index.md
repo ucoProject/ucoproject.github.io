@@ -10,7 +10,7 @@ custom_css: releases
 
 ## Ontology File(s)
 
-###### GitHub: Release TBD
+[GitHub](https://github.com/ucoProject/UCO/releases/tag/0.8.0)
 
 ## Release Notes
 UCO 0.8.0 is primarily focused on an initial implementation of Shapes Constraint Language (SHACL) review of semi-open vocabulary usage, restructuring of all UCO ontology IRIs and file structures to enable delivery of ontology resources from a new subdomain, flattening actionActionReferencesFacet properties directly onto action:Action, normalizing decimal number properties to xsd:decimal, improvements to unit and CI testing, numerous modifications and improvements to the Observable namespace, and correcting several minor issues and bugs.
@@ -52,4 +52,8 @@ UCO 0.8.0 is primarily focused on an initial implementation of Shapes Constraint
 
 ## Documentation
 
+Starting with UCO 0.8.0, generated documentation is available at this site:
+
 [https://ontology.unifiedcyberontology.org/](https://ontology.unifiedcyberontology.org/)
+
+Be aware that the documentation will show the most recent release, until an ontology versioning strategy currently in initial implementation completes its testing.  The upper-left corner of the documentation pages shows the ontology version being reviewed.
