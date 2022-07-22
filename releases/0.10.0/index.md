@@ -17,7 +17,7 @@ custom_css: releases
 #### Breaking Changes
 *(These are changes to ontologies, classes or properties in the preexisting ontology that make the new release non-backward-compatible.)*
 
-* Added the resource 'uco' to the IRI structure ([*GitHub Issue 387*](https://github.com/ucoProject/UCO/issues/387))
+* Added the resource 'uco' to the file layout ([*GitHub Issue 387*](https://github.com/ucoProject/UCO/issues/387))
 * Imported the Collections Ontology to handle ordered lists ([*GitHub Issue 389*](https://github.com/ucoProject/UCO/issues/389))
 * Disambiguated the two "Thread" classes within the observable namespace ([*GitHub Issue 391*](https://github.com/ucoProject/UCO/issues/391))
 * Implemented ordering in observable:MessageThread ([*GitHub Issue 393*](https://github.com/ucoProject/UCO/issues/393))
