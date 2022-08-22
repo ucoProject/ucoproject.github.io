@@ -21,8 +21,9 @@ custom_css: releases
 * Imported the Collections Ontology to handle ordered lists ([*GitHub Issue 389*](https://github.com/ucoProject/UCO/issues/389))
 * Disambiguated the two "Thread" classes within the observable namespace ([*GitHub Issue 391*](https://github.com/ucoProject/UCO/issues/391))
 * Implemented ordering in observable:MessageThread ([*GitHub Issue 393*](https://github.com/ucoProject/UCO/issues/393))
-* Added observable:startTime and observable:endTime to observable:EventFacet ([*GitHub Issue 396*](https://github.com/ucoProject/UCO/issues/396))
-* Changed minCount from 1 to 0 on multiple properties ([*GitHub Issue 428*](https://github.com/ucoProject/UCO/issues/428))
+* Added OWL 2 DL review with SHACL-SPARQL for UCO ([*GitHub Issue 406*](https://github.com/ucoProject/UCO/issues/406))
+  * (While this is not necessarily a backwards-incompatible change within the scope of UCO, it does identify what end users might not have realized were broader OWL errors.)
+* Converted glom_graph.py to rdfpipe ([*GitHub Issue 424*](https://github.com/ucoProject/UCO/issues/424))
 
 #### Changes
 *(These are general changes to the preexisting ontology that are not breaking or range changes.)*
@@ -30,15 +31,16 @@ custom_css: releases
 * Added properties to observable:WindowsComputerSpecificationFacet ([*Change Proposal 35*](https://drive.google.com/file/d/152FAccATI0XIrrm8VFLmVDif-3hnxSBR/view)) 
 * Added represention for Recoverability of Unallocated/Unavailable Files ([*Change Proposal 43*](https://drive.google.com/file/d/1EethPrq0ZpAIulrqviZV1etpvB64n0Pk/view))
 * Added representation for Cell Towers ([*Change Proposal 101*](https://drive.google.com/file/d/1i6QGC_HhL3Ni81DVmZuUA5k5qtDPjV8e/view))
+* Added observable:startTime and observable:endTime to observable:EventFacet ([*GitHub Issue 396*](https://github.com/ucoProject/UCO/issues/396))
 * Added service name and raw properties to observable:EventFacet ([*GitHub Issue 401*](https://github.com/ucoProject/UCO/issues/401))
-* Added OWL 2 DL review with SHACL-SPARQL for UCO ([*GitHub Issue 406*](https://github.com/ucoProject/UCO/issues/406))
 * Added time properties to observable:PDFFileFacet ([*GitHub Issue 421*](https://github.com/ucoProject/UCO/issues/421))
-* Converted glom_graph.py to rdfpipe ([*GitHub Issue 424*](https://github.com/ucoProject/UCO/issues/424))
+* Changed minCount from 1 to 0 on multiple properties ([*GitHub Issue 428*](https://github.com/ucoProject/UCO/issues/428))
 
 #### Bug Fixes
 *(These are bugs found within the preexisting ontology that have been fixed.)*
 
 * Removed errant rdf:List artifact ([*GitHub Pull Request 456*](https://github.com/ucoProject/UCO/pull/456))
+  * Users should be aware that a yet-undiagnosed bug somewhere in the UCO format-normalizing tool chain causes extra `rdf:Lists` fragments to be emitted in some normalized `pyshacl` output.
 * Removed usage of sh:declare ([*GitHub Pull Request 463*](https://github.com/ucoProject/UCO/pull/463))
 
 ## Documentation
