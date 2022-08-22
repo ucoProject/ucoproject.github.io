@@ -30,7 +30,7 @@ custom_css: releases
 
 * Added properties to observable:WindowsComputerSpecificationFacet ([*Change Proposal 35*](https://drive.google.com/file/d/152FAccATI0XIrrm8VFLmVDif-3hnxSBR/view)) 
 * Added represention for Recoverability of Unallocated/Unavailable Files ([*Change Proposal 43*](https://drive.google.com/file/d/1EethPrq0ZpAIulrqviZV1etpvB64n0Pk/view))
-* Added representation for Cell Towers ([*Change Proposal 101*](https://drive.google.com/file/d/1i6QGC_HhL3Ni81DVmZuUA5k5qtDPjV8e/view))
+* Added representation for Cell Sites ([*Change Proposal 101*](https://drive.google.com/file/d/1i6QGC_HhL3Ni81DVmZuUA5k5qtDPjV8e/view))
 * Added observable:startTime and observable:endTime to observable:EventFacet ([*GitHub Issue 396*](https://github.com/ucoProject/UCO/issues/396))
 * Added service name and raw properties to observable:EventFacet ([*GitHub Issue 401*](https://github.com/ucoProject/UCO/issues/401))
 * Added time properties to observable:PDFFileFacet ([*GitHub Issue 421*](https://github.com/ucoProject/UCO/issues/421))
