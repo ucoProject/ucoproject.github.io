@@ -26,7 +26,6 @@ custom_css: releases
 * Implemented ordering in observable:MessageThread ([*GitHub Issue 393*](https://github.com/ucoProject/UCO/issues/393))
 * Added OWL 2 DL review with SHACL-SPARQL for UCO ([*GitHub Issue 406*](https://github.com/ucoProject/UCO/issues/406))
   * (While this is not necessarily a backwards-incompatible change within the scope of UCO, it does identify what end users might not have realized were broader OWL errors.)
-* Removed requirement of repeating all property constraints from parent to child classes ([*GitHub Issue 417*](https://github.com/ucoProject/UCO/issues/417))
 * Converted glom_graph.py to rdfpipe ([*GitHub Issue 424*](https://github.com/ucoProject/UCO/issues/424))
 
 #### Changes
@@ -38,6 +37,7 @@ custom_css: releases
 * Added properties to represent application version history ([*GitHub Issue 372*](https://github.com/ucoProject/UCO/issues/372))
 * Added observable:startTime and observable:endTime to observable:EventFacet ([*GitHub Issue 396*](https://github.com/ucoProject/UCO/issues/396))
 * Added service name and raw properties to observable:EventFacet ([*GitHub Issue 401*](https://github.com/ucoProject/UCO/issues/401))
+* Removed requirement of repeating all property constraints from parent to child classes ([*GitHub Issue 417*](https://github.com/ucoProject/UCO/issues/417))
 * Added time properties to observable:PDFFileFacet ([*GitHub Issue 421*](https://github.com/ucoProject/UCO/issues/421))
 * Changed minCount from 1 to 0 on multiple properties ([*GitHub Issue 428*](https://github.com/ucoProject/UCO/issues/428))
 * Added the 'configuration' namespace to support tool and software details ([*GitHub Issue 432*](https://github.com/ucoProject/UCO/issues/432))
