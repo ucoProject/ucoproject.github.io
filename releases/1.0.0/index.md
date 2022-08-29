@@ -37,6 +37,7 @@ custom_css: releases
 * Added properties to represent application version history ([*GitHub Issue 372*](https://github.com/ucoProject/UCO/issues/372))
 * Added observable:startTime and observable:endTime to observable:EventFacet ([*GitHub Issue 396*](https://github.com/ucoProject/UCO/issues/396))
 * Added service name and raw properties to observable:EventFacet ([*GitHub Issue 401*](https://github.com/ucoProject/UCO/issues/401))
+* Removed requirement of repeating all property constraints from parent to child classes ([*GitHub Issue 417*](https://github.com/ucoProject/UCO/issues/417))
 * Added time properties to observable:PDFFileFacet ([*GitHub Issue 421*](https://github.com/ucoProject/UCO/issues/421))
 * Changed minCount from 1 to 0 on multiple properties ([*GitHub Issue 428*](https://github.com/ucoProject/UCO/issues/428))
 * Added the 'configuration' namespace to support tool and software details ([*GitHub Issue 432*](https://github.com/ucoProject/UCO/issues/432))
