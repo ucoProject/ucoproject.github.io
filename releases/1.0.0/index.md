@@ -17,6 +17,8 @@ custom_css: releases
 #### Breaking Changes
 *(These are changes to ontologies, classes or properties in the preexisting ontology that make the new release non-backward-compatible.)*
 
+* Updated observable:EventRecordFacet to reference things rather than strings ([*GitHub Issue 375*](https://github.com/ucoProject/UCO/issues/375))
+* Encoded core:hasFacet an inverse-functional property ([*GitHub Issue 379*](https://github.com/ucoProject/UCO/issues/379))
 * Added the resource 'uco' to the file layout ([*GitHub Issue 387*](https://github.com/ucoProject/UCO/issues/387))
 * Imported the Collections Ontology to handle ordered lists ([*GitHub Issue 389*](https://github.com/ucoProject/UCO/issues/389))
 * Disambiguated the two "Thread" classes within the observable namespace ([*GitHub Issue 391*](https://github.com/ucoProject/UCO/issues/391))
@@ -31,17 +33,22 @@ custom_css: releases
 * Added properties to observable:WindowsComputerSpecificationFacet ([*Change Proposal 35*](https://drive.google.com/file/d/152FAccATI0XIrrm8VFLmVDif-3hnxSBR/view)) 
 * Added represention for Recoverability of Unallocated/Unavailable Files ([*Change Proposal 43*](https://drive.google.com/file/d/1EethPrq0ZpAIulrqviZV1etpvB64n0Pk/view))
 * Added representation for Cell Sites ([*Change Proposal 101*](https://drive.google.com/file/d/1i6QGC_HhL3Ni81DVmZuUA5k5qtDPjV8e/view))
+* Removed observable:MSISDN from observable:MobileDeviceFacet ([*GitHub Issue 361*](https://github.com/ucoProject/UCO/issues/361))
+* Added properties to represent application version history ([*GitHub Issue 372*](https://github.com/ucoProject/UCO/issues/372))
 * Added observable:startTime and observable:endTime to observable:EventFacet ([*GitHub Issue 396*](https://github.com/ucoProject/UCO/issues/396))
 * Added service name and raw properties to observable:EventFacet ([*GitHub Issue 401*](https://github.com/ucoProject/UCO/issues/401))
 * Added time properties to observable:PDFFileFacet ([*GitHub Issue 421*](https://github.com/ucoProject/UCO/issues/421))
 * Changed minCount from 1 to 0 on multiple properties ([*GitHub Issue 428*](https://github.com/ucoProject/UCO/issues/428))
+* Added the 'configuration' namespace to support tool and software details ([*GitHub Issue 432*](https://github.com/ucoProject/UCO/issues/432))
 
 #### Bug Fixes
 *(These are bugs found within the preexisting ontology that have been fixed.)*
 
+* Added missing observable:mutexName property ([*GitHub Issue 443*](https://github.com/ucoProject/UCO/issues/443))
 * Removed errant rdf:List artifact ([*GitHub Pull Request 456*](https://github.com/ucoProject/UCO/pull/456))
   * Users should be aware that a yet-undiagnosed bug somewhere in the UCO format-normalizing tool chain causes extra `rdf:Lists` fragments to be emitted in some normalized `pyshacl` output.
 * Removed usage of sh:declare ([*GitHub Pull Request 463*](https://github.com/ucoProject/UCO/pull/463))
+* Fixed typo in rdfs:comment for observable:ApplicationFacet ([*GitHub Pull Request 466*](https://github.com/ucoProject/UCO/pull/466))
 
 ## Documentation
 
