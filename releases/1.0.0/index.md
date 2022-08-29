@@ -26,6 +26,7 @@ custom_css: releases
 * Implemented ordering in observable:MessageThread ([*GitHub Issue 393*](https://github.com/ucoProject/UCO/issues/393))
 * Added OWL 2 DL review with SHACL-SPARQL for UCO ([*GitHub Issue 406*](https://github.com/ucoProject/UCO/issues/406))
   * (While this is not necessarily a backwards-incompatible change within the scope of UCO, it does identify what end users might not have realized were broader OWL errors.)
+* Removed requirement of repeating all property constraints from parent to child classes ([*GitHub Issue 417*](https://github.com/ucoProject/UCO/issues/417))
 * Converted glom_graph.py to rdfpipe ([*GitHub Issue 424*](https://github.com/ucoProject/UCO/issues/424))
 
 #### Changes
