@@ -52,7 +52,7 @@ custom_css: releases
 
 * Added missing observable:mutexName property ([*GitHub Issue 443*](https://github.com/ucoProject/UCO/issues/443))
 * Removed confusion around core:Facet subclasses ([*GitHub Issue 445*](https://github.com/ucoProject/UCO/issues/445))
-* Made types:ControlledDictionary a subclass of types:Dictionary ([*GitHub Issue 469*](https://ucoProject/UCO/issues/469))
+* Made types:ControlledDictionary a subclass of types:Dictionary ([*GitHub Issue 469*](https://github.com/ucoProject/UCO/issues/469))
 * Removed errant rdf:List artifact ([*GitHub Pull Request 456*](https://github.com/ucoProject/UCO/pull/456))
   * Users should be aware that a yet-undiagnosed bug somewhere in the UCO format-normalizing tool chain causes extra `rdf:Lists` fragments to be emitted in some normalized `pyshacl` output.
 * Removed usage of sh:declare ([*GitHub Pull Request 463*](https://github.com/ucoProject/UCO/pull/463))
