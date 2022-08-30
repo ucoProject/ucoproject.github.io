@@ -26,7 +26,11 @@ custom_css: releases
 * Implemented ordering in observable:MessageThread ([*GitHub Issue 393*](https://github.com/ucoProject/UCO/issues/393))
 * Added OWL 2 DL review with SHACL-SPARQL for UCO ([*GitHub Issue 406*](https://github.com/ucoProject/UCO/issues/406))
   * (While this is not necessarily a backwards-incompatible change within the scope of UCO, it does identify what end users might not have realized were broader OWL errors.)
+* Changed observable:Event to observable:EventRecord ([*GitHub Issue 416*](https://github.com/ucoProject/UCO/issues/416))
 * Converted glom_graph.py to rdfpipe ([*GitHub Issue 424*](https://github.com/ucoProject/UCO/issues/424))
+* Removed core:id ([*GitHub Issue 431*](https://github.com/ucoProject/UCO/issues/431))
+* Removed core:type ([*GitHub Issue 433*](https://github.com/ucoProject/UCO/issues/433))
+* Corrected OWL 2 DL syntax of enumerations of literals ([*GitHub Issue 435*](https://github.com/ucoProject/UCO/issues/435))
 
 #### Changes
 *(These are general changes to the preexisting ontology that are not breaking or range changes.)*
@@ -41,11 +45,14 @@ custom_css: releases
 * Added time properties to observable:PDFFileFacet ([*GitHub Issue 421*](https://github.com/ucoProject/UCO/issues/421))
 * Changed minCount from 1 to 0 on multiple properties ([*GitHub Issue 428*](https://github.com/ucoProject/UCO/issues/428))
 * Added the 'configuration' namespace to support tool and software details ([*GitHub Issue 432*](https://github.com/ucoProject/UCO/issues/432))
+* Added various hierarchical classes to support observable:DeviceType ([*GitHub Issues 434*](https://github.com/ucoProject/UCO/issues/434))
 
 #### Bug Fixes
 *(These are bugs found within the preexisting ontology that have been fixed.)*
 
 * Added missing observable:mutexName property ([*GitHub Issue 443*](https://github.com/ucoProject/UCO/issues/443))
+* Removed confusion around core:Facet subclasses ([*GitHub Issue 445*](https://github.com/ucoProject/UCO/issues/445))
+* Made types:ControlledDictionary a subclass of types:Dictionary ([*GitHub Issue 469*](https://ucoProject/UCO/issues/469))
 * Removed errant rdf:List artifact ([*GitHub Pull Request 456*](https://github.com/ucoProject/UCO/pull/456))
   * Users should be aware that a yet-undiagnosed bug somewhere in the UCO format-normalizing tool chain causes extra `rdf:Lists` fragments to be emitted in some normalized `pyshacl` output.
 * Removed usage of sh:declare ([*GitHub Pull Request 463*](https://github.com/ucoProject/UCO/pull/463))
