@@ -57,6 +57,7 @@ custom_css: releases
   * Users should be aware that a yet-undiagnosed bug somewhere in the UCO format-normalizing tool chain causes extra `rdf:Lists` fragments to be emitted in some normalized `pyshacl` output.
 * Removed usage of sh:declare ([*GitHub Pull Request 463*](https://github.com/ucoProject/UCO/pull/463))
 * Fixed typo in rdfs:comment for observable:ApplicationFacet ([*GitHub Pull Request 466*](https://github.com/ucoProject/UCO/pull/466))
+* Fixed MyPy issues within CI ([*GitHub Pull Request 478*](https://github.com/ucoProject/UCO/pull/478))
 
 ## Documentation
 
