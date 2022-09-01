@@ -6,12 +6,15 @@ custom_css: releases
 
 # {{ page.title }}
 
-###### Date: TBD
+###### Date: 2022-08-31
 
 ## Ontology File(s)
 
+[GitHub](https://github.com/ucoProject/UCO/releases/tag/1.0.0)
 
 ## Release Notes
+
+UCO 1.0.0 incorporates required refinements and updates to provide a stable version for adopters to use. Following [SemVer](https://semver.org/spec/v2.0.0.html), additive improvements will continue to be accepted, but backwards-incompatible changes will be scheduled only for the 2.0.0 release, which will come after at least 6 months to possibly 12 months.
 
 
 #### Breaking Changes
