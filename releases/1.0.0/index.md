@@ -31,6 +31,7 @@ custom_css: releases
 * Removed core:id ([*GitHub Issue 431*](https://github.com/ucoProject/UCO/issues/431))
 * Removed core:type ([*GitHub Issue 433*](https://github.com/ucoProject/UCO/issues/433))
 * Corrected OWL 2 DL syntax of enumerations of literals ([*GitHub Issue 435*](https://github.com/ucoProject/UCO/issues/435))
+* Graph individuals are now required to not be blank nodes, and an IRI ending with a UUID is suggested ([*GitHub Issue 430*](https://github.com/ucoProject/UCO/issues/430))
 
 #### Changes
 *(These are general changes to the preexisting ontology that are not breaking or range changes.)*
