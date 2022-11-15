@@ -37,5 +37,7 @@ custom_css: releases
 
 *(These are bugs found within the preexisting ontology that have been fixed.)*
 
+* Fixed spelling pattern for some SHACL-SPARQL components ([*GitHub Issue 499*](https://github.com/ucoProject/UCO/issues/499))
+* Reversed logic for SHACL-SPARQL constraints sequence paths review ([*GitHub Issue 502*](https://github.com/ucoProject/UCO/issues/502))
 
 ## Documentation
