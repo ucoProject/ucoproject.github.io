@@ -14,6 +14,8 @@ custom_css: releases
 
 ## Release Notes
 
+UCO 1.1.0 incorporates required refinements and updates, building on the stable 1.0.0 release.  Following [SemVer](https://semver.org/spec/v2.0.0.html), additive improvements will continue to be accepted, but backwards-incompatible changes will be scheduled only for the 2.0.0 release, which will come after at least 6 months to possibly 12 months.
+
 
 ### Focus
 
