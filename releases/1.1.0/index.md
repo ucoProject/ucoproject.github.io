@@ -16,6 +16,8 @@ custom_css: releases
 
 UCO 1.1.0 incorporates required refinements and updates, building on the stable 1.0.0 release.  Following [SemVer](https://semver.org/spec/v2.0.0.html), additive improvements will continue to be accepted, but backwards-incompatible changes will be scheduled only for the 2.0.0 release, which will come after at least 6 months to possibly 12 months.
 
+This release adds an Analysis namespace for representing analytic actions and outcomes, and starts a framework for representing classifications by Artifical Intelligence frameworks.  Database cells can now be represented and related to various levels of a database storage hierarchy.  Two properties found to lack ranges have had ranges assigned in accordance with existing related properties.  Additional conformance testing has been added to verify UCO conformance with its design vocabularies (currently RDF, RDFS, OWL, and SHACL).  Various SHACL-OWL tests have received corrections.
+
 
 ### Focus
 
