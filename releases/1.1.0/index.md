@@ -27,6 +27,7 @@ custom_css: releases
 
 *(These are changes to ontologies, classes or properties in the preexisting ontology.)*
 
+* Added Analysis namespace and relevant classes/properties ([*GitHub Issue 400*](https://github.com/ucoProject/UCO/issues/400))
 * Added the ability to represent a database record at the cell level ([*GitHub Issue 415*](https://github.com/ucoProject/UCO/issues/415))
 * Added a typo checker to upstream design vocabularies ([*GitHub Issue 488*](https://github.com/ucoProject/UCO/issues/488))
 * Expanded CI trigger-branches to include multiple develops and unstables ([*GitHub Issue 493*](https://github.com/ucoProject/UCO/issues/493))
