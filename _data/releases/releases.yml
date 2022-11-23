@@ -28,3 +28,6 @@
 - title: 1.0.0
   date: 2022-08-31
   desc: Initial major release.
+- title: 1.2.0
+  date: 2022-08-31
+  desc: UCO 1.1.0 adds an Analysis namespace for representing analytic actions and outcomes, and starts a framework for representing classifications by Artifical Intelligence frameworks.  Database cells can now be represented and related to various levels of a database storage hierarchy.  Two properties found to lack ranges have had ranges assigned in accordance with existing related properties.  Additional conformance testing has been added to verify UCO conformance with its design vocabularies (currently RDF, RDFS, OWL, and SHACL).  Various SHACL-OWL tests have received corrections.
