@@ -32,5 +32,6 @@ custom_css: releases
 
 *(These are bugs found within the preexisting ontology that have been fixed.)*
 
+* Fixed classname reference for UcoThing-indentifier-regex-shape ([*GitHub Pull Request 510*](https://github.com/ucoProject/UCO/pull/510))
 
 ## Documentation
