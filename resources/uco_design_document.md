@@ -123,8 +123,8 @@ All objects in UCO must specify a globally unique identifier (discussed in #4 be
 Instances of UcoObject subclasses (domain concept classes) are the granularity of discourse in the cyber domain and are thus objects/nodes in the UCO domain graph. Relationships between UcoObject subclasses (expressed as object properties) are edges in the domain graph. Some relationships between UcoObject subclasses may require further characterization beyond simply expressing an association. These relationships are represented with the Relationship class which itself is a subclass of UcoObject and therefore a node itself in the domain graph. This is further discussed in #6 below.
 
 The domain graph of the above example would look like:
-![RDF Graph example](./object-example-domain-graph.drawio.png "Domain graph example")
 
+<img alt="Domain Graph example" src="./object-example-domain-graph.svg" title="Domain graph example" width="75%" />
 
 The UCO domain graph is also the standard granularity that content is typically serialized or queried at as well. If you query for or serialize a domain object you do so as a complete atomic entity including any non-domain objects characterizing the domain object.
 
