@@ -20,25 +20,25 @@ The following foundational principles outline the fundamental ethos of the Cyber
 # 2 Ontological Approach and Intent
 
  The primary purpose of the Unified Cyber Ontology (UCO) is to provide a consistent basis model for expressing, exchanging and analyzing information native to the cyber domain or relevant to the implementation, execution or results of analytic processes related to the cyber domain.
- 
+
  At a fundamental level this requires defining relevant concepts and the relevant relationships between them. This would include both high-level domain concepts as well as more granular concepts involved in characterizing the domain level concepts.
- 
+
  These definitions can then support expression of a diverse range of instance content of these concepts and relationships. Unlike many information standardization efforts targeted to support either solely information exchange or information analysis, UCO is very intentionally targeted to support both including analysis unbounded by any particular scope of exchange. Similarly, UCO is targeted to support expression of information across the scope of temporality including characterizations of past, present or potential future occurrences or states.
- 
+
  UCO recognizes the highly complex, diverse and rapidly evolving nature of the cyber domain and as such begins from a fundamental presumption that UCO can never fully define a complete model that provides adequate definition for all possible relevant use cases and scenarios. At any point in time no understanding can be presumed complete given the extreme diversity of the domain. Specification of UCO will always be an activity trailing the evolution of the domain over time. There will always be niche use cases and scenarios within the domain that are critical to support as part of the broader domain but not appropriate to attempt to standardize formally within the broadly targeted UCO. As such, to support practical adoption and use it is a critical requirement that UCO not only define known relevant concepts and relationships but also provide mechanisms for extension of the UCO at both a design and end-user level independent of current formal UCO specification at any point in time. The leading point of the evolutionary spear will typically be end-users discovering required use cases and scenarios that are not yet supported by the formal UCO specification and will need to be free to express what they need to express in a way that is as integrated as possible with existing specified UCO. Over time these end-user evolutions will be reviewed by adopting organizations or communities and defined as design-level extensions to UCO that provide improved clarity, consistency and rigor than simple ad-hoc user level extensions. Over time these design-level extensions can be submitted to the UCO community for consideration and possible inclusion in future releases of the formal UCO specification.
- 
+
  Efforts to standardize information representations within a given organization or system context are often pursued as formal data models defining an enterprise's data elements and connections between them. Such an approach can be effective when the exact scope, nature and use of the data is well-understood and tightly bound to a context controlled by the organization. Such approaches are typically not effective for standardizing information representations outside the scope of a given organization as such presumptions of homogeneity and control cease to be valid.
- 
- Efforts to standardize information exchange representations between systems or organizations are often pursued as defined serialization schemas (json schema, XML schema, protocol buffers, etc.). Such schemas provide consistent lexical and syntactic structure for known exchange structures. However such schematic approaches also suffer from significant limitations. 
+
+ Efforts to standardize information exchange representations between systems or organizations are often pursued as defined serialization schemas (json schema, XML schema, protocol buffers, etc.). Such schemas provide consistent lexical and syntactic structure for known exchange structures. However such schematic approaches also suffer from significant limitations.
 
  * Often lack definition of meaning for the concepts and relationships involved. Where meaning is provided it is typically in the form of an accompanying prose specifications that often suffer from ambiguities and inconsistencies due to human interpretation and lack a formal mechanism to ensure the formal schema specification and potential validation mechanism fully align to the prose specification.
- * Are often brittle to evolution and change where changes in one are may cause unseen impact in other areas. 
+ * Are often brittle to evolution and change where changes in one are may cause unseen impact in other areas.
  * Are tied to specific technical environment presumptions of use and inflexible to other environments.
  * Transformation to any other serialization is treated as an external transformation.
   * Require n-to-n separate transformation specifications and implementations to transform from one serialization to another.
 
 To achieve its targeted objectives UCO has chosen to pursue an ontological approach to its specification and use. An ontology encompasses a representation, formal naming, and definition of the categories, properties, and relations between the concepts, data, and entities that substantiate one, many, or all domains of discourse. [Ontology (information science) - Wikipedia](https://en.wikipedia.org/wiki/Ontology_(information_science)). An ontological approach offers many advantages over alternative approaches:
- 
+
 * Ontology models are inherently graph-centric which aligns very well to the nature of relevant information within the targeted scope of UCO.
 * The UCO ontology model can be formally specified using a combination of RDFS/OWL/SHACL thus reducing/removing ambiguity in the specification and supporting automated validation of the specification itself and instance content defined conformant to the specification.
 	* The W3C Resource Description Framework (RDF) provides a mechanism for expressing structured information in a flexible manner
@@ -57,42 +57,74 @@ To achieve its targeted objectives UCO has chosen to pursue an ontological appro
 * Formal RDFS/OWL/SHACL ontology models can support semantic-web/linked-data [Linked Data](https://www.w3.org/standards/semanticweb/data) use cases for integrating machine-readable UCO content (and specification) for an unbounded scope of contexts in a "live" dynamic form rather than limited to static serialized exchanges
 
  An RDF-based ontology approach was chosen over a labeled property graph approach primarily for reasons of informational flexibility and secondarily for ability to support semantic formality and capability.
- 
- The scope of UCO is targeted to serve as a middle-level ontology for the cyber domain and its use cases. 
- 
+
+ The scope of UCO is targeted to serve as a middle-level ontology for the cyber domain and its use cases.
+
  It is NOT intended to target definition of upper ontology-level concepts and is not currently bound to any particular upper ontology for reasons of practical flexibility. This decisions may be revisited in the future if an appropriate upper ontology alignment can be identified that offers the beneficial semantic consistency of an upper ontology with the requisite level of practical flexibility required by the targeted usage scope of UCO.
- 
+
  It is also NOT intended to target definition of detailed concepts specific to particular application-level subdomains (cyber investigation, cyber threat intelligence, risk management, etc.) of the cyber domain. Such application domains may initially be targeted within UCO with definitions within context-specific namespaces but these application domain ontologies built on UCO should be separated out into application domain focused efforts wherever appropriate.
- 
+
  &nbsp;
- 
- 
+
+
 
 # 3 Objects
 
 UCO conceptual content is represented as a graph with nodes and edges.
-The nodes in the graph are objects (instances of ontology classes) and the edges are explicitly defined relationships between objects.
+The nodes in the graph are objects (individual instances of ontology classes) and the edges are explicitly defined relationships between objects.
 
-It is important to note the difference in granularity between the RDF graph and the UCO domain graph.
-In the RDF graph ALL instances of classes and all literal values of properties are objects/nodes and all properties are edges.
+In an RDFS/OWL ontology all classes represent a scope/set of individual instances of particular "concepts". Each individual (object in the graph) has an ID and is asserted as a member of particular classes via type statements.
+
+To express simple literal characteristic properties of an individual member of a class we utilize datatype properties. Datatype properties are asserted as predicates of RDF triples (subject predicate object) where the individual is the subject and a literal is the object. For example, a concept class "Car" may have a simple datatype property "color" and an RDF triple for a given individual instance of the Car class could be expressed as [car-42 color "green"].
+
+To express characteristic properties of an individual member of a class that are more complicated than simple literals (typically made up of multiple aspects/properties) then we need to utilize object properties. Object properties are asserted as predicates of RDF triples where the individual is the subject and an individual object instance of a class is the object. For example, a concept class "Person" may have an object property "hasChild" and an RDF triple for a given individual instance of the Person class could be expressed as [person-4 hasChild person-12].
+
+It is important to note the difference between the full granularity of the RDF graph and the domain-relevant granularity of the UCO domain graph.
+In a fully granular RDF graph ALL instances of classes and all literal values of properties are objects/nodes and all properties (whether datatype properties or object properties) are edges.
+Fully granular RDF graphs contain the full detail of a graph but they are too granular to be practically useful for most specific domain use cases.
+
+Consider an example of a fully granular RDF graph of data representing roads, intersections, transportation routes, vehicles in general, particular kinds of vehicles (trucks, cars, etc), including full details of the vehicles such as general details (size, weight, number of wheels, passenger capacity, load capacity, etc), drivetrain details, chassis details, interior details, suspension details, electronic details, etc.
+
+This full set of data contains data useful for multiple different domain use cases but any particular domain use case is not going to want to think of everything in a fully granular fashion.
+
+A geographic domain use case may focus primarily on the locations of roads and intersections (not worrying about non-germane characteristics of them) and only consider routes and vehicles at a secondary level, not worrying at all about specific details of the vehicles.
+
+A cargo transportation domain use case may focus primarily on routes and specific types of vehicles possibly including relevant vehicle details but only as part of the vehicles themselves.
+
+Basically, depending on the domain use case, different classes may be considered of primary focus and could be considered domain object classes while other classes are only secondary or tertiary and could be considered non-domain object classes.
+
+When structuring the graph for any such domain use case it is desirable and more practical for the domain graph to only consist of domain object class instances and object properties. Any non-domain object classes and datatype properties would be considered internal adornments on the domain objects.
+Such graphs are often described as property graphs rather than semantic graphs (fully granular).
+
+
 
 Imagine UCO content expressing that a person John Smith is located at 5th Ave in New York City.
 An RDF graph of this would look like:
 ![RDF Graph example](./object-example-rdf-graph.drawio.png "RDF graph example")
 
-In the UCO RDFS/OWL/SHACL ontology, classes are defined for any relevant domain concept as well as for any structured concept characterizing some aspect of a domain concept. These are structured concept classes that specify into `UcoObject` classes, `Facet` classes and other classes. `UcoObject` and `Facet` classes therefore are structured concept classes, however, `UcoObject` classes and `Facet` classes are disjoint from each other. Moreover, `Facet` classes inhere in `UcoObject` classes; this implies that for a facet concept to exist, it is dependent on the existence of the UcoObject concept that bears the facet. For example, when destroying a red car, the car as bearer for the red color is removed and with it, its red color disappears. Note that the reverse is not true; UcoObjects are not existentially dependent on facets, and, thus, cannot inhere in them. Note further that, although the example suggests that facets are  compulsary for UcoObject concepts, this is not the case.
+In the UCO RDFS/OWL/SHACL ontology, all classes are defined as subclasses of the `UcoThing` class to provide a simple scoping of UCO defined "things".
+Within this scope, classes are defined for any relevant domain concept (domain objects) as well as for any structured concept characterizing some aspect of a domain concept (non-domain objects). To provide clear delineation between these, two disjoint subclasses of `UcoThing` are defined: `UcoObject` (for domain objects) and `UcoInherentCharacterizationThing` (for non-domain objects).
 
-Domain concept classes (e.g., File, Action, Identity, Location, Device, etc.) are defined as subclasses of the UcoObject class. `Facet` classes characterize a particular pattern of properties that potentially apply for more than one domain class; a color, weight, an address and alike (described in https://github.com/ucoProject/ucoproject.github.io/pull/5 below) represent characteristics that apply not only for cars, but also for houses, persons, books and what have you.
+`UcoInherentCharacterizationThing` classes inhere in `UcoObject` classes; this implies that for a `UcoInherentCharacterizationThing` concept to exist, it is dependent on the existence of the `UcoObject` concept that bears the `UcoInherentCharacterizationThing` characterizing it. For example, when destroying a red car, the car as bearer for the red color is removed and with it, its red color disappears. Note that the reverse is not true; `UcoObject` instances are not existentially dependent on `UcoInherentCharacterizationThing` instances, and, thus, cannot inhere in them. Note further that, although the example suggests that `UcoInherentCharacterizationThing` instances are compulsary for `UcoObject` concepts, this is not the case.
 
-Domain concept classes represent the things whereas facet classes represent the thing's characteristics. The disjointness between them follows from the fact that the thing can never be the same as its characteristics.
+Domain concept classes (e.g., File, Action, Identity, Location, Device, etc.) are defined as subclasses of the `UcoObject` class. Non-domain concept classes characterize domain concept classes and are defined as subclasses of the `UcoInherentCharacterizationThing` class. Domain concept classes represent the things whereas non-domain concept classes represent the thing's characteristics. The disjointness between them follows from the fact that the thing can never be the same as its characteristics.
+
+Individual instances of `UcoInherentCharacterizationThing` may appear in the fully granular RDF graph but only individual instances of `UcoObject` would appear in the domain graph.
+In the domain graph, any individual instances of `UcoInherentCharacterizationThing` would be considered internal characteristic properties of the individual instances of `UcoObject` they are associated with.
+This means that any object properties in a UCO domain graph that do not have a range that is `UcoObject` or one of its subclasses MUST have a range that is `UcoInherentCharacterizationThing` or one of its subclasses.
+
+The common default pattern for specifying a relationship between domain concept class (`UcoObject`) instances and any characterizing non-domain concept class (`UcoInherentCharacterizationThing`) instances is through the definition of purpose-specific object properties for each such relationship. For example, in UCO, Windows PE binary files are represented using the `observable:WindowsPEBinaryFile` subclass of `UcoObject`, sections of such files are represented using the `observable:WindowsPESection` subclass of `UcoInherentCharacterizationThing` and the two are associated to each other using the purpose-specific object property `observable:sections`.
+
+The upside of the purpose-specific object property approach is clarity but there are limitations/downsides as well. These limitations/downsides as well as the chosen solution to address them (Facets) are further detailed in #5 below.
+
 
 All objects in UCO must specify a globally unique identifier (discussed in #4 below) and an assertion of the class type of the object.
 
-Instances of UcoObject subclasses (domain concept classes) are the granularity of discourse in the cyber domain and are thus objects/nodes in the UCO domain graph. Relationships between UcoObject subclasses (either in the form of OWL ObjectProperties or in the form of Relationship object subclasses of UcoObject as described below) are edges in the domain graph. Some relationships between UcoObject subclasses may require further characterization beyond simply expressing an association. These relationships are represented with the Relationship class which itself is a subclass of UcoObject and therefore a node itself in the domain graph. This is further discussed in #6 below.
+Instances of UcoObject subclasses (domain concept classes) are the granularity of discourse in the cyber domain and are thus objects/nodes in the UCO domain graph. Relationships between UcoObject subclasses (expressed as object properties) are edges in the domain graph. Some relationships between UcoObject subclasses may require further characterization beyond simply expressing an association. These relationships are represented with the Relationship class which itself is a subclass of UcoObject and therefore a node itself in the domain graph. This is further discussed in #6 below.
 
 The domain graph of the above example would look like:
-![RDF Graph example](./object-example-domain-graph.drawio.png "Domain graph example")
 
+<img alt="Domain Graph example" src="./object-example-domain-graph.svg" title="Domain graph example" width="75%" />
 
 The UCO domain graph is also the standard granularity that content is typically serialized or queried at as well. If you query for or serialize a domain object you do so as a complete atomic entity including any non-domain objects characterizing the domain object.
 
@@ -156,7 +188,7 @@ All objects, both domain and non-domain, must have globally unique identifiers. 
 Non-domain objects (non-UcoObject subclasses) exist within the domain graph only as part of other domain objects. In localized RDF content, such objects are often referred to as blank nodes and are by default given simple identifiers that are not unique outside of the local graph they are defined in. Given the fact that UCO is intended to support aggregation and analysis of content across multiple graphs, such non-unique identifiers are inadequate. Such objects can also be given full globally unique identifiers. UCO non-domain objects should leverage this capability to ensure integrity of the aggregated or integrated graph.
 
 
-As RDF identifiers these object identifiers must be International Resource Identifiers (IRIs). 
+As RDF identifiers these object identifiers must be International Resource Identifiers (IRIs).
 
 An IRI can follow one of several schemes, including URN, HTTP, or HTTPS. In order to ensure global uniqueness and to support use as [Linked Data](https://en.wikipedia.org/wiki/Linked_data), UCO object identifiers should adhere to a formatting pattern consisting of a prefix portion combined with a suffix portion where the prefix portion is an HTTP or HTTPS URI based namespace controlled by the producer of the object and the suffix portion is a combination of an indicator of the object type followed by a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier#Versions).
 
@@ -181,7 +213,35 @@ By default the UUIDs used in object identifiers should be randomly generated UUI
 
 # 5 Facets
 
-A facet is a grouping of characteristics unique to a particular aspect of an object. It is a special type of non-domain class/object as it is designed as a general characterizing extension for a domain object. It is defined as a subclass of core:Facet (or one of its context-specific subclasses) and is conveyed as part of a domain object using the ```core:hasFacet``` property. Ideally, facets within a particular context scope (e.g., identity, location, observable, etc.) should be defined as subclasses of a context-specific subclass of ```core:hasFacet``` such as ```identity:IdentityFacet```. Facets are heavily used in context-specific areas such as identity, location and especially for observables. Properties of observable objects (e.g. ```observable:File```) are expressed utilizing facets (e.g., ```observable:FileFacet```, ```observable:ContentDataFacet```, etc.). This serves to enable Duck Typing as described in #5.1 below and flexible characterization of subclasses of observable objects through combinations of facets rather than more complex property inheritance via definition directly on observable object subclasses that proved highly problematic in other information standards efforts such as CybOX.
+
+As discussed in #3 above, there are some limitations/downsides to the common default purpose-specific object property approach for associating instances of `UcoObject` with instances of `UcoInherentCharacterizationThing` that characterize them.
+
+Some of these are:
+
+* Adding any new `UcoInherentCharacterizationThing` classes requires adding new purpose-specific object properties as well as changes to the shape of the `UcoObject` class it applies to.
+  * In some cases (where purpose-specific object properties may not be appropriate) this leads to unnecessarily verbose/complex serializations.
+  * In some cases (where purpose-specific object properties may not be appropriate) this means defining, managing, tracking and processing many unnecessary object properties. Each new object property is a new predicate and therefore a new type of graph edge.
+  * In many cases (where purpose-specific object properties may not be appropriate) this leads to unnecessary and sometimes impractical churn on the UcoObject shapes affecting adopters.
+     * This is particularly true for new `UcoInherentCharacterizationThing` classes added to application subdomain ontologies built on UCO and to very specific usage communities and scenarios.
+         * In many of these cases the new `UcoInherentCharacterizationThing` classes may only be relevant to the application subdomain ontologies or very specific usage communities and scenarios. In these cases modifying the general shape for the `UcoObject` at the UCO level would be inappropriate.
+     * This is also true for defining particular subclasses of existing `UcoInherentCharacterizationThing` classes
+* In some cases (e.g., Identity) (where purpose-specific object properties may not be appropriate) this also makes it more complicated for particular adopters (e.g., application subdomain ontologies or even specific communities or organizations) to scope their adoption to specific `UcoInherentCharacterizationThing` class-based characteristics.
+  * The purpose-specific object property approach requires them to define their own specialized complex shapes (defining property shapes for all of the separate purpose-specific object properties) for the relevant UcoObjects.
+* In some cases (e.g., Location) (where purpose-specific object properties may not be appropriate) this also makes it unnecessarily more complicated for expressing the same basic concept characterization using different mechanisms (e.g., a location expressed utilizing different coordinate systems).
+* In some cases where specific context may not yet be understood and more general property association is necessary (e.g. duck typing), the purpose-specific object properties approach is impractical.
+* In some cases where differing levels of detail may be needed to characterize a given concept and handling it all through subclassing involves impractical complexity. This can be seen in the UCO approach for observable objects due to lessons learned in the Cyber Observable eXpression (CybOX) standardization effort which is the base origin for the UCO approach. CybOX found it highly detrimental to attempt to manage multiple levels of characterization detail through purpose-specific properties on complex subclass hierarchies (e.g., a plain file, a plain raster image file, a raster image file with EXIF data, etc.). Similar lessons were also learned in the Structured Threat Information eXpression (STIX) standardization effort.
+
+
+Because of these many limitations/downsides and necessary use cases there is a need for a generalized object property mechanism (in addition to the common default purpose-specific approach) to associate some `UcoInherentCharacterizationThing` classes with `UcoObject` classes in cases where it is appropriate.
+
+Such a mechanism is currently implemented in UCO using the `Facet` subclass of `UcoInherentCharacterizationThing` class combined with the `hasFacet` object property on the `UcoObject` class which very significantly mitigates the above limitations/downsides as well as supports many of the necessary use cases.
+
+A `Facet` is simply a `UcoInherentCharacterizationThing` that is associated with a `UcoObject` through use of a generic (`hasFacet`) rather than purpose-specific object property.
+Facets are fully consistent with ontological principles.
+They are simply one particular pattern of object property.
+
+
+A facet is a grouping of characteristics unique to a particular aspect of an object. It is a special type of non-domain class/object as it is designed as a general characterizing extension for a domain object. It is defined as a subclass of `core:Facet` (or one of its context-specific subclasses) and is conveyed as part of a domain object using the `core:hasFacet` property. Ideally, facets within a particular context scope (e.g., identity, location, observable, etc.) should be defined as subclasses of a context-specific subclass of `core:Facet` such as `identity:IdentityFacet`. Facets are heavily used in context-specific areas such as identity, location and especially for observables. Properties of observable objects (e.g. `observable:File`) are expressed utilizing facets (e.g., `observable:FileFacet`, `observable:ContentDataFacet`, etc.). This serves to enable Duck Typing as described in #5.1 below and flexible characterization of subclasses of observable objects through combinations of facets rather than more complex property inheritance via definition directly on observable object subclasses that proved highly problematic in other information standards efforts such as CybOX.
 
 For instance, a digital photograph is represented as an ```observable:RasterPicture``` subclass of ```observable:ObservableObject``` with the ```observable:FileFacet```, ```observable:ContentDataFacet```, and ```observable:RasterPictureFacet```.
 
@@ -197,10 +257,7 @@ For instance, a digital photograph is represented as an ```observable:RasterPict
             "observable:fileName": "IMG_0123.jpg",
             "observable:filePath": "/sdcard/IMG_0123.jpg",
             "observable:extension": "jpg",
-            "observable:sizeInBytes": {
-                "@type": "xsd:long",
-                "@value": 35002
-            }
+            "observable:sizeInBytes": 35002
         },
         {
             "@id": "kb:content-data-facet-434100af-bbd1-45d5-8926-92b191793f84",
@@ -208,16 +265,16 @@ For instance, a digital photograph is represented as an ```observable:RasterPict
             "observable:byteOrder": "BigEndian",
             "observable:magicNumber": "/9j/ww==",
             "observable:mimeType": "image/jpg",
-            "observable:sizeInBytes": {
-                "@type": "xsd:long",
-                "@value": 35000
-            },
+            "observable:sizeInBytes": 35000,
             "observable:dataPayload": "<base 64 encoded data of the file>",
             "observable:hash": [
                 {
                     "@id": "kb:hash-a63dc64c-a07d-4c23-8013-c84ccd6592d8",
                     "@type": "types:Hash",
-                    "types:hashMethod": {"SHA256"},
+                    "types:hashMethod": {
+                        "@type": "vocabulary:HashNameVocab",
+                        "@value": "SHA256"
+                    },
                     "types:hashValue": {
                         "@type": "xsd:hexBinary",
                         "@value": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
@@ -237,11 +294,21 @@ For instance, a digital photograph is represented as an ```observable:RasterPict
 }
 ```
 
-The generalized approach of facets on domain objects provides value in simple support for use of particular facets across multiple classes/objects, for simplified 3rd party extension of UCO classes/objects, and for clean granularity for adopting profiles or application domain extensions to choose which adornments they want to use.
+The generalized approach of facets on domain objects provides value by mitigating the above limitations/downsides as well as supporting many of the necessary use cases.
 
-If particular characterizing properties are directly relevant to the object across most use cases they are typically defined as properties directly on the class/object but where they may be characterizing a particular aspect of an object relevant to some but not all use cases they are typically defined as a facet that can be applied to the class/object when appropriate.
+* Simple support for use of particular non-domain concept classes across multiple domain concept classes
+* Simplified 3rd party extension of UCO classes/objects
+* Reduces verbosity and complexity for appropriate use cases
+* Significantly reduces shape churn for appropriate cases
+* Supports duck-typing use case (described in #5.1 below)
+* Supports differential mechanism case (e.g., different mechanisms for expressing location info) simply without the complexity found in some ontologies taking a purely purpose-specific object property approach (e.g., GeoSPARQL)
+* Supports differential relevance case (e.g., different aspects of Identity such as birthinfo, credentials, citizenship info, physical characteristics, etc)
+* Highly useful in adorning Relationships with various contextual information
+* Approach has been proven in CybOX, STIX and also recently incorporated into SPDX
 
-For example, the properties ```core:source``` and ```core:target``` are always relevant to the ```core:Relationship``` class/object in all use cases and are therefore defined as direct properties of ```core:relationship```. On the other hand, differing use cases may characterize a ```location:Location``` as a simple address, or as a set of latitude-longitude coordinates, or as a set of GPS coordinates or any combination thereof. Because of this variation, properties characterizing a location in the form of an address are defined using the ```location:SimpleAddressFacet```, properties characterizing a location in the form of a set of latitude-longitude coordinates are defined using the ```location:LatLongCoordinatesFacet```, and a location in the form of a set of GPS coordinates are defined using the ```location:GPSCoordinatesFacet```.
+If particular characterizing properties are directly relevant to the object across most use cases they are typically defined as purpose-specific properties directly on the class/object but where they may be characterizing a particular aspect of an object relevant to some but not all use cases they are typically defined as a facet that can be applied to the class/object when appropriate.
+
+For example, the properties `core:source` and `core:target` are always relevant to the `core:Relationship` class/object in all use cases and are therefore defined as direct properties of `core:relationship`. On the other hand, differing use cases may characterize a `location:Location` as a simple address, or as a set of latitude-longitude coordinates, or as a set of GPS coordinates or any combination thereof. Because of this variation, properties characterizing a location in the form of an address are defined using the `location:SimpleAddressFacet`, properties characterizing a location in the form of a set of latitude-longitude coordinates are defined using the `location:LatLongCoordinatesFacet`, and a location in the form of a set of GPS coordinates are defined using the `location:GPSCoordinatesFacet`.
 
 Facets are intended to be unique when specified on a given object meaning that no single facet class should appear more than once on a single object.
 
@@ -252,7 +319,7 @@ Facets are intended to be unique when specified on a given object meaning that n
 
 CASE uses facets to represent various properties of the associated Observable Objects. CASE uses the programing concept of ‘duck typing’, allowing an object to be enriched with any rational combination of facets. Cyber-investigations can involve various kinds of data, including unexpected combinations of properties in a single object. CASE uses duck typing which allows data to be defined by its inherent characteristics rather than enforcing strict data typing. CASE objects can be assigned any rational combination of facets, such as a file that is an image and a thumbnail. When employing this approach, data types are evaluated with the duck test, allowing data to be represented more truly without imposing a rigid class structure. Simply stated, if it walks like a duck, swims like a duck, quacks like a duck, and looks like a duck, then it probably is a duck. For certain common combinations of facets, it is possible to assign them a higher-level class, such a PDF File or WhatsApp Message. “This flexible approach is favored over using the OWL concept of inheritance to define an object with various properties. Using inheritance requires permitted properties to be formally defined for each object type, which becomes un-wieldy when unexpected combinations of objects are encountered, such as one type of data embedded within another type of data that was not imagined when the ontology was designed.” (Casey et al, 2017)
 
-The example from #5 above could also be expressed with duck typing as a general ```observable:ObservableObject``` adorned with the multiple facets. 
+The example from #5 above could also be expressed with duck typing as a general ```observable:ObservableObject``` adorned with the multiple facets.
 
 ```json
 {
@@ -266,10 +333,7 @@ The example from #5 above could also be expressed with duck typing as a general 
             "observable:fileName": "IMG_0123.jpg",
             "observable:filePath": "/sdcard/IMG_0123.jpg",
             "observable:extension": "jpg",
-            "observable:sizeInBytes": {
-                "@type": "xsd:long",
-                "@value": 35002
-            }
+            "observable:sizeInBytes": 35002
         },
         {
             "@id": "kb:content-data-facet-9bf2df61-2df9-4690-a2d8-6ac14b75ed5b",
@@ -277,10 +341,7 @@ The example from #5 above could also be expressed with duck typing as a general 
             "observable:byteOrder": "BigEndian",
             "observable:magicNumber": "/9j/ww==",
             "observable:mimeType": "image/jpg",
-            "observable:sizeInBytes": {
-                "@type": "xsd:long",
-                "@value": 35000
-            },
+            "observable:sizeInBytes": 35000,
             "observable:dataPayload": "<base 64 encoded data of the file>",
             "observable:hash": [
                 {
@@ -328,9 +389,9 @@ For example, consider an email message and the relationship to an email address 
 
 Such object properties are simple to express and simple to query or navigate in the overall graph.
 
-Unfortunately, not all relationships are so simple. 
+Unfortunately, not all relationships are so simple.
 
-Many relationships may be relevant outside of either of the related objects and many relationships require further characterization beyond a simple association. 
+Many relationships may be relevant outside of either of the related objects and many relationships require further characterization beyond a simple association.
 
 An asserted relationship that has relevance outside of either of the related objects is inherently a conceptual object itself with a need for unique identification and the ability to be referenced by other objects or even be part of a separate asserted relationship between it and other objects (relationships about relationships). Unique identification is also required to support the ability to assert multiple separate instances of the same type of relationship between the same objects asserted by different parties or at different times or with differing additional characterizing adornment.
 

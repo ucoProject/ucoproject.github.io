@@ -1,0 +1,9 @@
+digraph "domain graph example" {
+	rankdir="LR"
+	_r [label="kb:relationship-cecfbe8c-8357-4105-b448-b491177fedf2"] ;
+	_p [label="kb:person-952c09ff-5a38-483b-9dcf-6d8f0b27dfac"] ;
+	_l [label="kb:location-7044bee0-d5d2-45f3-bb5d-2ced42bfd3f4"] ;
+
+	_r -> _p [label="core:source"] ;
+	_r -> _l [label="core:target"] ;
+}
