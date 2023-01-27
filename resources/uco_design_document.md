@@ -257,10 +257,7 @@ For instance, a digital photograph is represented as an ```observable:RasterPict
             "observable:fileName": "IMG_0123.jpg",
             "observable:filePath": "/sdcard/IMG_0123.jpg",
             "observable:extension": "jpg",
-            "observable:sizeInBytes": {
-                "@type": "xsd:long",
-                "@value": 35002
-            }
+            "observable:sizeInBytes": 35002
         },
         {
             "@id": "kb:content-data-facet-434100af-bbd1-45d5-8926-92b191793f84",
@@ -268,16 +265,16 @@ For instance, a digital photograph is represented as an ```observable:RasterPict
             "observable:byteOrder": "BigEndian",
             "observable:magicNumber": "/9j/ww==",
             "observable:mimeType": "image/jpg",
-            "observable:sizeInBytes": {
-                "@type": "xsd:long",
-                "@value": 35000
-            },
+            "observable:sizeInBytes": 35000,
             "observable:dataPayload": "<base 64 encoded data of the file>",
             "observable:hash": [
                 {
                     "@id": "kb:hash-a63dc64c-a07d-4c23-8013-c84ccd6592d8",
                     "@type": "types:Hash",
-                    "types:hashMethod": {"SHA256"},
+                    "types:hashMethod": {
+                        "@type": "vocabulary:HashNameVocab",
+                        "@value": "SHA256"
+                    },
                     "types:hashValue": {
                         "@type": "xsd:hexBinary",
                         "@value": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
@@ -336,10 +333,7 @@ The example from #5 above could also be expressed with duck typing as a general 
             "observable:fileName": "IMG_0123.jpg",
             "observable:filePath": "/sdcard/IMG_0123.jpg",
             "observable:extension": "jpg",
-            "observable:sizeInBytes": {
-                "@type": "xsd:long",
-                "@value": 35002
-            }
+            "observable:sizeInBytes": 35002
         },
         {
             "@id": "kb:content-data-facet-9bf2df61-2df9-4690-a2d8-6ac14b75ed5b",
@@ -347,10 +341,7 @@ The example from #5 above could also be expressed with duck typing as a general 
             "observable:byteOrder": "BigEndian",
             "observable:magicNumber": "/9j/ww==",
             "observable:mimeType": "image/jpg",
-            "observable:sizeInBytes": {
-                "@type": "xsd:long",
-                "@value": 35000
-            },
+            "observable:sizeInBytes": 35000,
             "observable:dataPayload": "<base 64 encoded data of the file>",
             "observable:hash": [
                 {
