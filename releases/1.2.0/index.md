@@ -27,11 +27,13 @@ custom_css: releases
 
 *(These are changes to ontologies, classes or properties in the preexisting ontology.)*
 
+* Added observable:StorageMediumFacet and observable:totalStorageCapacityInBytes ([*GitHub Issue 501*](https://github.com/ucoProject/UCO/issues/501))
 
 #### Bug Fixes
 
 *(These are bugs found within the preexisting ontology that have been fixed.)*
 
 * Fixed classname reference for UcoThing-indentifier-regex-shape ([*GitHub Pull Request 510*](https://github.com/ucoProject/UCO/pull/510))
+* Added missing prefixes for a few SPARQL constraints ([*GitHub Issue 513*](https://github.com/ucoProject/UCO/issues/513))
 
 ## Documentation
