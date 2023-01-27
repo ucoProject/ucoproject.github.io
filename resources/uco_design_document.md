@@ -303,9 +303,9 @@ The generalized approach of facets on domain objects provides value by mitigatin
 * Simplified 3rd party extension of UCO classes/objects
 * Reduces verbosity and complexity for appropriate use cases
 * Significantly reduces shape churn for appropriate cases
-* Supports duck-typing use case (described in #5.1 below) very simply
+* Supports duck-typing use case (described in #5.1 below)
 * Supports differential mechanism case (e.g., different mechanisms for expressing location info) simply without the complexity found in some ontologies taking a purely purpose-specific object property approach (e.g., GeoSPARQL)
-* Supports differential relevance case (e.g., different aspects of Identity such as birthinfo, credentials, citizenship info, physical characteristics, etc) very simply
+* Supports differential relevance case (e.g., different aspects of Identity such as birthinfo, credentials, citizenship info, physical characteristics, etc)
 * Highly useful in adorning Relationships with various contextual information
 * Approach has been proven in CybOX, STIX and also recently incorporated into SPDX
 
