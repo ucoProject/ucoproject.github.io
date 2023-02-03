@@ -33,6 +33,8 @@ custom_css: releases
 
 *(These are bugs found within the preexisting ontology that have been fixed.)*
 
+* Deprecated and replaced observable:creationTime with observable:observableCreatedTime ([*GitHub Issue 508*](https://github.com/ucoProject/UCO/issues/508))
+* Added CI tests to ensure core:UcoObject and co:Collection are disjoint ([*GitHub Issue 509*](https://github.com/ucoProject/UCO/issues/509))
 * Fixed classname reference for UcoThing-indentifier-regex-shape ([*GitHub Pull Request 510*](https://github.com/ucoProject/UCO/pull/510))
 * Added missing prefixes for a few SPARQL constraints ([*GitHub Issue 513*](https://github.com/ucoProject/UCO/issues/513))
 

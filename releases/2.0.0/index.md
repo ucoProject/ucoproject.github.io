@@ -37,5 +37,7 @@ custom_css: releases
 
 *(These are bugs found within the preexisting ontology that have been fixed.)*
 
+* Removed deprecated property: observable:creationTime ([*GitHub Issue 508*](https://github.com/ucoProject/UCO/issues/508))
+* Aligned types:Thread with core:UcoInherentCharacterizationThing ([*GitHub Issue 509*](https://github.com/ucoProject/UCO/issues/509))
 
 ## Documentation
