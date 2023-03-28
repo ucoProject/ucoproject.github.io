@@ -46,6 +46,7 @@ This release includes additive updates as well as exercising a process for intro
 * Aligned `types:Thread` with `core:UcoThing` subclass hierarchy; consequently added CI tests to ensure `core:UcoObject` and `co:Collection` are disjoint in accordance with current implementation patterns ([*GitHub Issue 509*](https://github.com/ucoProject/UCO/issues/509))
 * Fixed classname reference for `UcoThing-indentifier-regex-shape` ([*GitHub Pull Request 510*](https://github.com/ucoProject/UCO/pull/510))
 * Added missing prefixes for a few SPARQL constraints ([*GitHub Issue 513*](https://github.com/ucoProject/UCO/issues/513))
+* Clarified Continuous Integration test output for vocabulary synchronization ([*GitHub Pull Request 528*](https://github.com/ucoProject/UCO/pull/528))
 
 
 ## Documentation
