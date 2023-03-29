@@ -28,6 +28,9 @@
 - title: 1.0.0
   date: 2022-08-31
   desc: Initial major release.
-- title: 1.2.0
-  date: 2022-08-31
+- title: 1.1.0
+  date: 2022-11-22
   desc: UCO 1.1.0 adds an Analysis namespace for representing analytic actions and outcomes, and starts a framework for representing classifications by Artifical Intelligence frameworks.  Database cells can now be represented and related to various levels of a database storage hierarchy.  Two properties found to lack ranges have had ranges assigned in accordance with existing related properties.  Additional conformance testing has been added to verify UCO conformance with its design vocabularies (currently RDF, RDFS, OWL, and SHACL).  Various SHACL-OWL tests have received corrections.
+- title: 1.2.0
+  date: 2023-03-29
+  desc: UCO 1.2.0 includes additive updates as well as exercising a process for introducing backwards-incompatible changes in preparation for UCO 2.0.0.  A new feature incorporates construction of support for offline development with some ontology tools that require local-file substitution for imported IRIs.  Community member testing identified and mitigated environmental assumptions revealed by exercising UCO with processing frameworks not included in Cyber Domain Ontology automated testing.  Some mobile device property cardinalities are now relaxed care of a user encountering and reporting an encountered, uncommon device configuration.  Vocabularies have expanded to cover further cryptography needs.  One bug fix in class alignment for a "Data structure" class (`types:Thread`) has introduced a backwards-incompatible fix for the 2.0.0 release cycle, with a warning now being raised within the 1.x.0 release cycle if the future pattern enforcement will fail.

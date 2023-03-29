@@ -6,10 +6,12 @@ custom_css: releases
 
 # {{ page.title }}
 
-*Date: TBD*
+*Date: 2023-03-29*
 
 
 ## Ontology File(s)
+
+[GitHub](https://github.com/ucoProject/UCO/releases/tag/1.2.0)
 
 
 ## Release Notes
