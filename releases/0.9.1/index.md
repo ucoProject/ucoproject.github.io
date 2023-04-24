@@ -33,7 +33,7 @@ UCO 0.9.1 implements a starting point in UCO for ontology version designation an
 
 ## Documentation
 
-Coming soon to this site:
+Generated documentation is available at this site:
 
 [https://ontology.unifiedcyberontology.org/](https://ontology.unifiedcyberontology.org/)
 

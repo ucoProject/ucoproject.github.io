@@ -65,5 +65,18 @@ UCO 1.0.0 incorporates required refinements and updates to provide a stable vers
 * Fixed typo in rdfs:comment for observable:ApplicationFacet ([*GitHub Pull Request 466*](https://github.com/ucoProject/UCO/pull/466))
 * Fixed MyPy issues within CI ([*GitHub Pull Request 478*](https://github.com/ucoProject/UCO/pull/478))
 
+
+## Known issues
+
+* After release, an errant concept reference in UCO 1.0.0 was found to prevent some OWL tools from parsing the ontology.  This bug was corrected as part of resolving [UCO Issue 488](https://github.com/ucoProject/UCO/issues/488), and the correction is released in [UCO 1.1.0](../1.1.0/).
+
+
 ## Documentation
 
+Generated documentation is available at this site:
+
+[https://ontology.unifiedcyberontology.org/](https://ontology.unifiedcyberontology.org/)
+
+Be aware that the documentation at that site will only show the most recent release.  The upper-left corner of the documentation pages shows the ontology version being reviewed.
+
+After the following UCO release, users interested seeing the rendered documentation at this version "Back in time" should locally clone the repository, check out [this branch](https://github.com/ucoProject/ontology.unifiedcyberontology.org/tree/archive/release-1.0.0), and follow the deployment directions in `CONTRIBUTE.md`.
