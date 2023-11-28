@@ -27,6 +27,8 @@ custom_css: releases
 
 *(These are changes to ontologies, classes or properties in the preexisting ontology that make the new release non-backward-compatible.)*
 
+* Enforced `observable:File` and `:URL` disjointedness ([*GitHub Issue 536*](https://github.com/ucoProject/UCO/issues/536))
+
 
 #### General changes
 
