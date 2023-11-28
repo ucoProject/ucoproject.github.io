@@ -27,6 +27,8 @@ custom_css: releases
 
 *(These are changes to ontologies, classes or properties in the preexisting ontology.)*
 
+* Added `core:Event` ([*GitHub Issue 541*](https://github.com/ucoProject/UCO/issues/541))
+
 
 #### Bug Fixes
 
