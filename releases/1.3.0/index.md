@@ -32,6 +32,7 @@ UCO 2.0.0 **will** consider the following breaking changes.  They are implemente
 *(These are changes to ontologies, classes or properties in the preexisting ontology.)*
 
 * Added `core:Event` ([*GitHub Issue 541*](https://github.com/ucoProject/UCO/issues/541))
+   - Designated `action:Action` and `core:Event` disjoint ([*GitHub Issue 563*](https://github.com/ucoProject/UCO/issues/563))
 
 
 #### Bug Fixes
