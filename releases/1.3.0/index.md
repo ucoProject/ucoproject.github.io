@@ -39,5 +39,7 @@ UCO 2.0.0 **will** consider the following breaking changes.  They are implemente
 
 *(These are bugs found within the preexisting ontology that have been fixed.)*
 
+* Reduced UCO OWL RDF List review scope to OWL Sequences ([*GitHub Issue 571*](https://github.com/ucoProject/UCO/issues/571))
+
 
 ## Documentation
