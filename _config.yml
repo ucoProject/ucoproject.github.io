@@ -64,6 +64,8 @@ exclude:
   - requirements.txt
   - src/
   - venv/
+  - Dockerfile
+  - docker-compose.yml
 
 # Google Analytics
 google_analytics: 
