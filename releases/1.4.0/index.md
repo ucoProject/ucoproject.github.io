@@ -34,5 +34,7 @@ custom_css: releases
 
 *(These are bugs found within the preexisting ontology that have been fixed.)*
 
+* Replaced errant reference to non-existent concept `owl:Datatype` ([*GitHub Issue 584*](https://github.com/ucoProject/UCO/issues/584))
+
 
 ## Documentation
