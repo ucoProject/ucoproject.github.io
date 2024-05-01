@@ -27,6 +27,8 @@ custom_css: releases
 
 *(These are changes to ontologies, classes or properties in the preexisting ontology.)*
 
+* Removed 1-member minimum on core:ContextualCompilation ([*GitHub Issue 599*](https://github.com/ucoProject/UCO/issues/599))
+
 
 #### Bug Fixes
 
