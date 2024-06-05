@@ -32,6 +32,11 @@ UCO 2.0.0 **will** consider the following breaking changes.  They are implemente
 *(These are changes to ontologies, classes or properties in the preexisting ontology.)*
 
 * Removed 1-member minimum on core:ContextualCompilation ([*GitHub Issue 599*](https://github.com/ucoProject/UCO/issues/599))
+* Added review mechanisms for key-uniqueness in `types:Dictionary` ([*GitHub Issue 602*](https://github.com/ucoProject/UCO/issues/602))
+   - Added new subclasses of `types:Dictionary`, `types:ProperDictionary` and `types:ImproperDictionary`
+   - Added test for key uniqueness of dictionary entries for `types:Dictionary`, with "Warning"-level SHACL violations raised if repeated keys are found
+   - Encoded key uniqueness as a SHACL-validated requirement in `types:ProperDictionary`
+   - Changed definition of `types:Dictionary` to separate expectation of key uniqueness in `types:Dictionary` from formally validated requirement in `types:ProperDictionary`
 
 
 #### Bug Fixes
