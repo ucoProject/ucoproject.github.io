@@ -25,6 +25,7 @@ custom_css: releases
 UCO 2.0.0 **will** consider the following breaking changes.  They are implemented in UCO 1.4.0 as "Warning"-level SHACL violations; in 2.0.0, they will be "Error"-level.
 
 * Warned if target or source on an `ObservableRelationship` are not `Observable`s ([*GitHub Issue 573*](https://github.com/ucoProject/UCO/issues/573))
+* Warned of prior disjointedness declarations in `core:` and `types:` ([*GitHub Issue 586*](https://github.com/ucoProject/UCO/issues/586))
 
 
 #### Changes

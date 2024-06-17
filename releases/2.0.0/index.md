@@ -29,6 +29,7 @@ custom_css: releases
 
 * Enforced `observable:File` and `:URL` disjointedness ([*GitHub Issue 536*](https://github.com/ucoProject/UCO/issues/536))
 * Required target or source on an `ObservableRelationship` be `Observable`s ([*GitHub Issue 573*](https://github.com/ucoProject/UCO/issues/573))
+* Enforced prior disjointedness declarations in `core:` and `types:` ([*GitHub Issue 586*](https://github.com/ucoProject/UCO/issues/586))
 
 
 #### General changes
