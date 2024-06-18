@@ -46,6 +46,7 @@ custom_css: releases
 * Aligned `types:Thread` with `core:UcoInherentCharacterizationThing` ([*GitHub Issue 509*](https://github.com/ucoProject/UCO/issues/509))
 * Designated `observable:ObservablePattern` a subclass of `pattern:Pattern` ([*GitHub Issue 543*](https://github.com/ucoProject/UCO/issues/543))
 * Designated `action:ActionLifecycle` a subclass of `action:ActionPattern` ([*GitHub Issue 556*](https://github.com/ucoProject/UCO/issues/556))
+* Changed `AlternateDataStream` parent class to `FileSystemObject` ([*GitHub Issue 590*](https://github.com/ucoProject/UCO/issues/590))
 
 
 ## Documentation

@@ -26,6 +26,7 @@ UCO 2.0.0 **will** consider the following breaking changes.  They are implemente
 
 * Warned if target or source on an `ObservableRelationship` are not `Observable`s ([*GitHub Issue 573*](https://github.com/ucoProject/UCO/issues/573))
 * Warned of prior disjointedness declarations in `core:` and `types:` ([*GitHub Issue 586*](https://github.com/ucoProject/UCO/issues/586))
+* Warned if an `AlternateDataStream` instance is not also a `FileSystemObject` ([*GitHub Issue 590*](https://github.com/ucoProject/UCO/issues/590))
 
 
 #### Changes
