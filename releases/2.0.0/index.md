@@ -47,6 +47,7 @@ custom_css: releases
 * Designated `observable:ObservablePattern` a subclass of `pattern:Pattern` ([*GitHub Issue 543*](https://github.com/ucoProject/UCO/issues/543))
 * Designated `action:ActionLifecycle` a subclass of `action:ActionPattern` ([*GitHub Issue 556*](https://github.com/ucoProject/UCO/issues/556))
 * Changed `AlternateDataStream` parent class to `FileSystemObject` ([*GitHub Issue 590*](https://github.com/ucoProject/UCO/issues/590))
+* Changed `observable:Disk` parent class to `observable:StorageMedium` ([*GitHub Issue 612*](https://github.com/ucoProject/UCO/issues/612))
 
 
 ## Documentation
