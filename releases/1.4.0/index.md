@@ -39,6 +39,7 @@ UCO 2.0.0 **will** consider the following breaking changes.  They are implemente
    - Added test for key uniqueness of dictionary entries for `types:Dictionary`, with "Warning"-level SHACL violations raised if repeated keys are found
    - Encoded key uniqueness as a SHACL-validated requirement in `types:ProperDictionary`
    - Changed definition of `types:Dictionary` to separate expectation of key uniqueness in `types:Dictionary` from formally validated requirement in `types:ProperDictionary`
+* Added `core:objectStatus` ([*GitHub Issue 549*](https://github.com/ucoProject/UCO/issues/549))
 
 
 #### Bug Fixes
