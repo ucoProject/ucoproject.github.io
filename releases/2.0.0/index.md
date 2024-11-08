@@ -37,6 +37,8 @@ custom_css: releases
 
 *(These are general changes to the preexisting ontology that are not breaking or range changes.)*
 
+* Changed `OperatingSystem` parent class to `Software` ([*GitHub Issue 632*](https://github.com/ucoProject/UCO/issues/632))
+
 
 #### Bug Fixes
 

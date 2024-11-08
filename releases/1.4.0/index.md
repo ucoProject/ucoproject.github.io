@@ -28,6 +28,7 @@ UCO 2.0.0 **will** consider the following breaking changes.  They are implemente
 * Warned of prior disjointedness declarations in `core:` and `types:` ([*GitHub Issue 586*](https://github.com/ucoProject/UCO/issues/586))
 * Warned if an `AlternateDataStream` instance is not also a `FileSystemObject` ([*GitHub Issue 590*](https://github.com/ucoProject/UCO/issues/590))
 * Warned if a `observable:Disk` instance is not also a `observable:StorageMedium` ([*GitHub Issue 612*](https://github.com/ucoProject/UCO/issues/612))
+* Warned if an `OperatingSystem` instance is not also a `Software` ([*GitHub Issue 632*](https://github.com/ucoProject/UCO/issues/632))
 
 
 #### Changes
