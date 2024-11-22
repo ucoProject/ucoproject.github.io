@@ -42,6 +42,7 @@ UCO 2.0.0 **will** consider the following breaking changes.  They are implemente
    - Encoded key uniqueness as a SHACL-validated requirement in `types:ProperDictionary`
    - Changed definition of `types:Dictionary` to separate expectation of key uniqueness in `types:Dictionary` from formally validated requirement in `types:ProperDictionary`
 * Added `core:objectStatus` ([*GitHub Issue 549*](https://github.com/ucoProject/UCO/issues/549))
+* Added `observable:cpeid` to `observable:DeviceFacet` ([*GitHub Issue 624*](https://github.com/ucoProject/UCO/issues/624))
 
 
 #### Bug Fixes
