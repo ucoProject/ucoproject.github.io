@@ -43,6 +43,7 @@ UCO 2.0.0 **will** consider the following breaking changes.  They are implemente
    - Changed definition of `types:Dictionary` to separate expectation of key uniqueness in `types:Dictionary` from formally validated requirement in `types:ProperDictionary`
 * Added `core:objectStatus` ([*GitHub Issue 549*](https://github.com/ucoProject/UCO/issues/549))
 * Added `observable:cpeid` to `observable:DeviceFacet` ([*GitHub Issue 624*](https://github.com/ucoProject/UCO/issues/624))
+* Added `core:informalType` and linked as parent of type-describing properties ([*GitHub Issue 640*](https://github.com/ucoProject/UCO/issues/640))
 
 
 #### Bug Fixes
