@@ -31,6 +31,7 @@ custom_css: releases
 * Required target or source on an `ObservableRelationship` be `Observable`s ([*GitHub Issue 573*](https://github.com/ucoProject/UCO/issues/573))
 * Enforced prior disjointedness declarations in `core:` and `types:` ([*GitHub Issue 586*](https://github.com/ucoProject/UCO/issues/586))
 * Revised `pattern:patternExpression` to be object property, and tested for error form ([*GitHub Issue 562*](https://github.com/ucoProject/UCO/issues/562))
+* Enforced vocabulary pattern revision ([*GitHub Issue 629*](https://github.com/ucoProject/UCO/issues/629))
 
 
 #### General changes
