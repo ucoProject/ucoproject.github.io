@@ -53,6 +53,7 @@ UCO 2.0.0 **will** consider the following breaking changes.  They are implemente
 * Replaced errant reference to non-existent concept `owl:Datatype` ([*GitHub Issue 584*](https://github.com/ucoProject/UCO/issues/584))
 * Removed `owl:onDatatype` from vocabulary definitions ([*GitHub Issue 593*](https://github.com/ucoProject/UCO/issues/593))
 * Revised vocabulary pattern ([*GitHub Issue 629*](https://github.com/ucoProject/UCO/issues/629))
+* Fixed copy-paste error ([*GitHub Pull Request 654*](https://github.com/ucoProject/UCO/pull/654))
 
 
 ## Documentation
