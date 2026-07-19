@@ -27,6 +27,8 @@ custom_css: releases
 
 *(These are changes to ontologies, classes or properties in the preexisting ontology.)*
 
+* Added `core:UcoType` and `core:Technique` ([*GitHub Issue 666*](https://github.com/ucoProject/UCO/issues/666))
+
 
 #### Bug Fixes
 
